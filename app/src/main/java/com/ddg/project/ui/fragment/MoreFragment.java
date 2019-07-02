@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -39,10 +40,26 @@ public class MoreFragment extends Fragment implements View.OnClickListener {
         View inflate = inflater.inflate(R.layout.fragment_more, container, false);
         sharedPreferenceManager = new SharedPreferenceManager(getActivity());
         languageUtil = new LanguageUtil(getActivity());
-        TextView tvChangeLanguage = inflate.findViewById(R.id.tv_changeLanguage);
-        tvChangeLanguage.setOnClickListener(this);
+        init(inflate);
+
 
         return inflate;
+    }
+
+    private void init(View inflate) {
+        TextView tvAboutUs = inflate.findViewById(R.id.tv_aboutUs);
+        TextView tvChangeLanguage = inflate.findViewById(R.id.tv_changeLanguage);
+
+        TextView tvContactUs = inflate.findViewById(R.id.tv_contactUs);
+        TextView tvRateApp = inflate.findViewById(R.id.tv_rateApp);
+        TextView tvShareApp = inflate.findViewById(R.id.tv_shareApp);
+
+        tvAboutUs.setOnClickListener(this);
+        tvChangeLanguage.setOnClickListener(this);
+        tvContactUs.setOnClickListener(this);
+        tvRateApp.setOnClickListener(this);
+        tvShareApp.setOnClickListener(this);
+
     }
 
     void showLanguageDialog() {
@@ -81,12 +98,49 @@ public class MoreFragment extends Fragment implements View.OnClickListener {
 
         int id = view.getId();
 
+
         switch (id) {
             case R.id.tv_changeLanguage:
                 showLanguageDialog();
+                break;
+            case R.id.tv_aboutUs:
+                setAboutUsDialog();
+                break;
+            case R.id.tv_contactUs:
+                break;
+            case R.id.tv_rateApp:
+                break;
+            case R.id.tv_shareApp:
+                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+                String shareBody = "Here is the share content body";
+                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+                startActivity(Intent.createChooser(sharingIntent, "Share via"));
                 break;
 
 
         }
     }
+
+    private void setAboutUsDialog() {
+
+        final Dialog dialog2 = new Dialog(getActivity(), android.R.style.Theme_Black_NoTitleBar_Fullscreen);
+
+        dialog2.requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
+        dialog2.setContentView(R.layout.about_us);
+//        dialog2.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        ImageView ivAboutUsBack = dialog2.findViewById(R.id.iv_aboutUsBack);
+        ivAboutUsBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog2.dismiss();
+            }
+        });
+        dialog2.show();
+
+    }
+
+
 }
