@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">DDG</string>
+    <string name="home">Home</string>
+    <string name="scan">Scan</string>
+    <string name="more">More</string>
+
+    <string name="PermissionGranted">Permission granted</string>
+    <string name="PermissionDenied">Permission denied</string>
+    <string name="makeUp">Makeup</string>
+    <string name="perfumes">Perfumes</string>
+    <string name="skinCare">Skin care</string>
+    <string name="hair">Hair</string>
+    <string name="makeUpSubTitle">lipstick,Foundatio, \n Eyeliner</string>
+    <string name="perfumesSubTitle">Perfume, badysplash, \n Eau de toilet,</string>
+    <string name="skinCareSubTitle"><![CDATA[Cleanser, BB&CC Cream, \n Masks & scrubs]]></string>
+    <string name="hairSubTitle">Shampoo, Conditioner, \n HairTratments</string>
+    <string name="myActivity">My activity</string>
+    <string name="historyScan">History scan</string>
+    <string name="other">Other</string>
+    <string name="aboutUs">About Us</string>
+    <string name="setting">Settings</string>
+    <string name="contactUs">Contact Us</string>
+    <string name="shareApp">Share App</string>
+    <string name="rateApp">Rate the App</string>
+
+    <string name="arabic">Arabic</string>
+    <string name="english">English</string>
+    <string name="appLanguage">Languages</string>
 </resources>

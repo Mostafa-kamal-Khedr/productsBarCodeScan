@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_logo" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--makeup-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_makeup">
+
+                <TextView
+                    android:id="@+id/tv_makeup_title"
+                    style="@style/home_textViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/makeUp" />
+
+                <TextView
+                    android:id="@+id/tv_makeup_subTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_makeup_title"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/makeUpSubTitle"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@android:color/white" />
+
+            </RelativeLayout>
+
+            <!--perfumes-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/bg_perfime">
+
+                <TextView
+                    android:id="@+id/tv_perfumes_title"
+                    style="@style/home_textViewStyle"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:text="@string/perfumes" />
+
+                <TextView
+                    android:id="@+id/tv_perfumes_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_perfumes_title"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/perfumesSubTitle"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+
+                    android:textColor="@android:color/white" />
+
+            </RelativeLayout>
+            <!--skinCare-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/bg_skin_care">
+
+                <TextView
+                    android:id="@+id/tv_skinCare_title"
+                    style="@style/home_textViewStyle"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:text="@string/skinCare" />
+
+                <TextView
+                    android:id="@+id/tv_skinCare_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_skinCare_title"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+
+                    android:layout_marginStart="30dp"
+                    android:text="@string/skinCareSubTitle"
+                    android:textColor="@android:color/white" />
+
+            </RelativeLayout>
+            <!--hair-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/bg_hair">
+
+                <TextView
+                    android:id="@+id/tv_hair_title"
+                    style="@style/home_textViewStyle"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:text="@string/hair" />
+
+                <TextView
+                    android:id="@+id/tv_hair_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_hair_title"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+
+                    android:layout_marginStart="30dp"
+                    android:text="@string/hairSubTitle"
+                    android:textColor="@android:color/white" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
+
+

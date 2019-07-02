@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DDG</string>
+    <string name="home">الرئيسية</string>
+    <string name="scan">مسح</string>
+    <string name="more">المزيد</string>
+
+    <string name="PermissionGranted">تم منح التصريح</string>
+    <string name="PermissionDenied">طلب الاذن مرفوض</string>
+    <string name="makeUp">Makeup</string>
+    <string name="perfumes">Perfumes</string>
+    <string name="skinCare">Skin care</string>
+    <string name="hair">Hair</string>
+    <string name="makeUpSubTitle">lipstick,Foundatio, Eyeliner</string>
+    <string name="perfumesSubTitle">Perfume, badysplash, Eau de toilet,</string>
+    <string name="skinCareSubTitle"><![CDATA[Cleanser, BB&CC Cream, Masks & scrubs]]></string>
+    <string name="hairSubTitle">Shampoo, Conditioner, HairTratments</string>
+    <string name="myActivity">My activity</string>
+    <string name="historyScan">History scan</string>
+    <string name="other">Other</string>
+    <string name="aboutUs">About Us</string>
+    <string name="setting">Settings</string>
+    <string name="contactUs">Contact Us</string>
+    <string name="shareApp">Share App</string>
+    <string name="rateApp">Rate the App</string>
+    <string name="arabic">العربية</string>
+    <string name="english">الانجليزية</string>
+    <string name="appLanguage">Languages</string>
+
+</resources>
