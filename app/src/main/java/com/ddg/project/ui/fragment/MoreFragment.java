@@ -3,6 +3,7 @@ package com.ddg.project.ui.fragment;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -109,25 +110,37 @@ public class MoreFragment extends Fragment implements View.OnClickListener {
             case R.id.tv_contactUs:
                 break;
             case R.id.tv_rateApp:
+
+
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/search?q=ddg&c=apps&hl=en")));
                 break;
             case R.id.tv_shareApp:
-                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
-                sharingIntent.setType("text/plain");
-                String shareBody = "Here is the share content body";
-                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
-                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
-                startActivity(Intent.createChooser(sharingIntent, "Share via"));
+
+
+                setShareApp();
+
                 break;
 
 
         }
     }
 
+    private void setShareApp() {
+        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        String shareBody = "Here is the share content body";
+        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
+        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+        startActivity(Intent.createChooser(sharingIntent, "Share via"));
+
+
+    }
+
     private void setAboutUsDialog() {
 
         final Dialog dialog2 = new Dialog(getActivity(), android.R.style.Theme_Black_NoTitleBar_Fullscreen);
 
-        dialog2.requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
+//        dialog2.requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
         dialog2.setContentView(R.layout.about_us);
 //        dialog2.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 

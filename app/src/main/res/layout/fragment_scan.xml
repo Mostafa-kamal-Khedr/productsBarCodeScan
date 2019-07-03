@@ -1,85 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#02317B"
+tools:context=".ui.fragment.ScanFragment">
+<!--internal  custom app bar-->
+<RelativeLayout
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#02317B"
-    tools:context=".ui.fragment.ScanFragment">
-            <!--internal  custom app bar-->
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="match_parent"
 
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/colorPrimary"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
-            android:layout_centerInParent="true"
-            android:text="@string/scan" />
-
-  <!--      <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="24dp"
-            android:layout_alignParentEnd="true"
-            android:src="@drawable/ic_scan_selector"
-            />-->
-        <CheckBox
-            android:id="@+id/rb_scan_flashLight"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="24dp"
-            android:layout_alignParentEnd="true"
-            android:background="@drawable/ic_scan_selector"
-            android:button="@android:color/transparent"
-            android:checked="false"
-            android:gravity="center"
-          />
-
-
-    </RelativeLayout>
-
-    <ImageView
-        android:id="@+id/ic_scan_logo"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="8dp"
-        android:src="@drawable/ic_barcode"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
-
-
-    <Button
-        android:id="@+id/btn_scan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/shape_white_top_tweenty_redius_bottom"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
+        android:layout_centerInParent="true"
         android:text="@string/scan"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ic_scan_logo"
-        app:layout_constraintVertical_bias="0.382" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/white" />
+
+    <!--      <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+              android:layout_marginEnd="24dp"
+              android:layout_alignParentEnd="true"
+              android:src="@drawable/ic_scan_selector"
+              />-->
+    <CheckBox
+        android:id="@+id/rb_scan_flashLight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/ic_scan_selector"
+        android:button="@android:color/transparent"
+        android:checked="false"
+        android:gravity="center" />
+
+
+</RelativeLayout>
+
+<ImageView
+    android:id="@+id/ic_scan_logo"
+    android:layout_width="300dp"
+    android:layout_height="200dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="48dp"
+    android:layout_marginEnd="8dp"
+    android:src="@drawable/ic_barcode"
+    android:visibility="gone"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.497"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+
+<fragment
+    android:id="@+id/barcode_fragment"
+    android:name="info.androidhive.barcode.BarcodeReader"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="48dp"
+    android:layout_marginEnd="8dp"
+    app:auto_focus="true"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.497"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+    app:use_flash="false" />
+
+
+<Button
+    android:id="@+id/btn_scan"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/shape_white_top_tweenty_redius_bottom"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:text="@string/scan"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/ic_scan_logo"
+    app:layout_constraintVertical_bias="0.382" />
 </android.support.constraint.ConstraintLayout>

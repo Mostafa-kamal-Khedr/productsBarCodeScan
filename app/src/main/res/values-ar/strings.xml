@@ -7,26 +7,35 @@
 
     <string name="PermissionGranted">تم منح التصريح</string>
     <string name="PermissionDenied">طلب الاذن مرفوض</string>
-    <string name="makeUp">Makeup</string>
-    <string name="perfumes">Perfumes</string>
-    <string name="skinCare">Skin care</string>
-    <string name="hair">Hair</string>
-    <string name="makeUpSubTitle">lipstick,Foundatio, Eyeliner</string>
-    <string name="perfumesSubTitle">Perfume, badysplash, Eau de toilet,</string>
-    <string name="skinCareSubTitle"><![CDATA[Cleanser, BB&CC Cream, Masks & scrubs]]></string>
-    <string name="hairSubTitle">Shampoo, Conditioner, HairTratments</string>
-    <string name="myActivity">My activity</string>
-    <string name="historyScan">History scan</string>
-    <string name="other">Other</string>
-    <string name="aboutUs">About Us</string>
-    <string name="setting">Settings</string>
-    <string name="contactUs">Contact Us</string>
-    <string name="shareApp">Share App</string>
-    <string name="rateApp">Rate the App</string>
+    <string name="makeUp">ميك أب</string>
+    <string name="perfumes">عطور</string>
+    <string name="skinCare">العناية بالبشرة</string>
+    <string name="hair">شعر</string>
+    <string name="makeUpSubTitle">أحمر الشفاه ، كريم اساس ، ايلاينر</string>
+    <string name="perfumesSubTitle">عطر ، بودي سبلاش ، أو دو تواليت ،</string>
+    <string name="skinCareSubTitle">منظف ,كريم, ماسك, مقشر</string>
+    <string name="hairSubTitle">شامبو ، مكيف ، علاجات الشعر</string>
+    <string name="myActivity">نشاطي</string>
+    <string name="historyScan">الارشيف</string>
+    <string name="other">اخرى</string>
+    <string name="aboutUs">من نحن</string>
+    <string name="setting">الاعدادت</string>
+    <string name="contactUs">تواصل معنا</string>
+    <string name="shareApp">شارك التطبيق</string>
+    <string name="rateApp">قيم التطبيق</string>
     <string name="arabic">العربية</string>
     <string name="english">الانجليزية</string>
-    <string name="appLanguage">Languages</string>
-    <string name="whoWeAre">Who We Are?</string>
-    <string name="whoWeAreSubTitle">Outdoor advertising is a low budget and effective way of advertising a company’s product. Among the entire methods billboard advertising is the most sort after method, which has been proven to be the best sales strategy in the recent times. Nearly 5.6 billion dollar was spent on billboard advertising alone, in the year 2006, as analyzed by Outdoor Advertising Association of America. Billboard advertising is the best bet in outdoor advertising and isn’t that costly. And with the amount of exposure the product gets the money is worth it. In the past few years several factors have triggered billboard advertising and cost effectiveness being one of the prime reasons.</string>
+    <string name="appLanguage">اللغات</string>
+    <string name="whoWeAre">من نحن ؟</string>
+    <string name="whoWeAreSubTitle">هو مشروع غير تجاري ، ويعتبر مشروع تخرج الطلاب\n استنادًا إلى مصادقة أداة الباركود لمنتجات محددة مثل المكياج والعطور ومنتجات العناية بالبشرة
+
+        والشعر لفحصها إذا كان أصليًا أو مزيفًا وابلاغ عن المنتجات المقلدة ومفيد للحد من الاحتيال التجاري.
+
+ \n \n  فريق العمل :  \nدانا\n دلال  \nغزوة
+\n \n مقدم إلى:\n د. أحمد مزيد</string>
+    <string name="OriginalProduct">Original Product</string>
+    <string name="successDetials">This product is a original product from the manufacturerYou can know more details if you pressing on the product details</string>
+    <string name="productDetails">Product details</string>
+    <string name="rescan">Rescan</string>
 
 </resources>

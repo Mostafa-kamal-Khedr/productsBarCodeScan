@@ -42,6 +42,7 @@
                 <TextView
                     android:id="@+id/tv_makeup_title"
                     style="@style/home_textViewStyle"
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/makeUp" />
@@ -51,8 +52,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tv_makeup_title"
-                    android:layout_marginStart="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="30dp"
                     android:text="@string/makeUpSubTitle"
+                    android:textAlignment="textStart"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@android:color/white" />
 
@@ -78,10 +81,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tv_perfumes_title"
-                    android:layout_marginStart="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="30dp"
                     android:text="@string/perfumesSubTitle"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-
                     android:textColor="@android:color/white" />
 
             </RelativeLayout>
@@ -105,10 +108,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tv_skinCare_title"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_marginLeft="30dp"
+                    android:layout_alignParentLeft="true"
 
-                    android:layout_marginStart="30dp"
                     android:text="@string/skinCareSubTitle"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@android:color/white" />
 
             </RelativeLayout>
@@ -132,10 +136,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tv_hair_title"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_marginLeft="30dp"
+                    android:layout_alignParentLeft="true"
 
-                    android:layout_marginStart="30dp"
+
                     android:text="@string/hairSubTitle"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@android:color/white" />
 
             </RelativeLayout>
