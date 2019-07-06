@@ -65,7 +65,13 @@
     <string name="invalidName">من فضلك قم بإدخال اسم صحيح</string>
     <string name="empity">من فضلك ادخل بيانات</string>
     <!--- - - - - - - - -  - - - - - - - - - - - - -  -->
+    <string name="title_activity_maps">الخريطة</string>
 
+    <string name="gps_network_not_enabled">الشبكة غير مفعلة! تريد أن تذهب إلى القائمة؟</string>
+    <string name="open_location_settings">فتح إعدادات الموقع</string>
+    <string name="no">لا</string>
+    <string name="enterMapAddress">أدخل العنوان أو المدينة أو الرمز البريدي</string>
 
-
+    <string name="yes">نعم</string>
+    <string name="add">Add</string>
 </resources>

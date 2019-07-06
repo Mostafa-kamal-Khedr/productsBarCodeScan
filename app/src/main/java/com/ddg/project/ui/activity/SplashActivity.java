@@ -1,14 +1,16 @@
 package com.ddg.project.ui.activity;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 import com.ddg.project.R;
 import com.ddg.project.helper.LanguageUtil;
 import com.ddg.project.helper.SharedPreferenceManager;
 import com.jaeger.library.StatusBarUtil;
+
+import java.util.Locale;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -18,9 +20,9 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         StatusBarUtil.setTransparent(SplashActivity.this);
 
-        SharedPreferenceManager sharedPreferenceManager=new SharedPreferenceManager(SplashActivity.this);
-        LanguageUtil languageUtil=new LanguageUtil(SplashActivity.this);
-        languageUtil.setLocale(sharedPreferenceManager.loadLanguage());
+        setAppLanguage();
+
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -29,6 +31,22 @@ public class SplashActivity extends AppCompatActivity {
 
             }
         }, 3000);
+
+    }
+
+    private void setAppLanguage() {
+        SharedPreferenceManager sharedPreferenceManager = new SharedPreferenceManager(SplashActivity.this);
+        LanguageUtil languageUtil = new LanguageUtil(SplashActivity.this);
+        if (sharedPreferenceManager.loadLanguage() != null) {
+
+            languageUtil.setLocale(sharedPreferenceManager.loadLanguage());
+
+        } else {
+            String phoneLanguage = Locale.getDefault().getLanguage();
+
+            languageUtil.setLocale(phoneLanguage);
+
+        }
 
     }
 }

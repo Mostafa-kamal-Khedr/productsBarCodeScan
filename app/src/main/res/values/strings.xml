@@ -64,7 +64,17 @@ Presented To : \n Dr. Ahmed Al Mazyad</string>
 
     <string name="invalidName">Invalid User Name</string>
     <string name="empity">Please enter data</string>
-
+    <string name="title_activity_maps">Map</string>
+    <string name="gps_network_not_enabled">Network is not enapled! want to go to setting menu?</string>
+    <string name="open_location_settings">open location settings</string>
 
     <!--- - - - - - - - - - - - - - - - - - - - - - -  -->
+
+
+    <string name="no">no</string>
+    <string name="yes">yes</string>
+
+    <string name="enterMapAddress">Enter the address, city, or postal code</string>
+    <string name="add">Add</string>
+
 </resources>

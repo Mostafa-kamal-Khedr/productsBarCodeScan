@@ -1,6 +1,9 @@
 package com.ddg.project.helper;
+
 import android.content.Context;
 import android.content.SharedPreferences;
+
+import com.google.android.gms.maps.model.LatLng;
 
 public class SharedPreferenceManager {
 
@@ -40,7 +43,7 @@ public class SharedPreferenceManager {
     }
 
     public String loadLanguage() {
-        return sharedPreferences.getString(LANGUAGE, "ar");
+        return sharedPreferences.getString(LANGUAGE, null);
     }
 
     public void saveRestrauntId(String restrauntId) {
@@ -48,8 +51,9 @@ public class SharedPreferenceManager {
         myEditor.putString(RESTRAUNT_ID, restrauntId);
         myEditor.apply();
     }
-    public String loadRestrauntId(){
-        return sharedPreferences.getString(RESTRAUNT_ID,"1");
+
+    public String loadRestrauntId() {
+        return sharedPreferences.getString(RESTRAUNT_ID, "1");
     }
 
 
@@ -104,9 +108,6 @@ public class SharedPreferenceManager {
         return sharedPreferences.getString(USER_TYPE, null);
     }
 
-    public String loadUserMapAddress() {
-        return sharedPreferences.getString(USER_MAPADDRESS, null);
-    }
 
     public float loadUserLat() {
         return sharedPreferences.getFloat(USER_LAT, 25.5f);
@@ -172,4 +173,22 @@ public class SharedPreferenceManager {
 
         myEditor.commit();
     }
+
+
+    public void saveUserCoordinates(String userAddress, String userMapAddress, LatLng userLatLong) {
+        SharedPreferences.Editor myEditor = sharedPreferences.edit();
+        myEditor.putString(USER_ADDRESS, userAddress);
+        myEditor.putString(USER_MAPADDRESS, userMapAddress);
+        myEditor.putFloat(USER_LAT, (float) userLatLong.latitude);
+        myEditor.putFloat(USER_LONG, (float) userLatLong.longitude);
+
+        myEditor.apply();
+        myEditor.commit();
+    }
+
+
+    public String loadUserMapAddress() {
+        return sharedPreferences.getString(USER_MAPADDRESS, null);
+    }
+
 }

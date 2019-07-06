@@ -39,6 +39,7 @@ import java.util.List;
 
 import info.androidhive.barcode.BarcodeReader;
 
+
 public class MainActivity extends AppCompatActivity implements BarcodeReader.BarcodeReaderListener {
 
     private BottomNavigationView navigation;
