@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:id="@+id/rl_contactUsParent"
+android:layout_height="match_parent"
+    >
+<!--start of appBarContainer-->
+<RelativeLayout
+    android:id="@+id/BarContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/custom_appBar"
+        layout="@layout/app_bar" />
+
+</RelativeLayout>
+
+<LinearLayout
+    android:id="@+id/ll_contactUsContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/BarContainer"
+
+    android:orientation="vertical"
+    android:padding="30dp">
+
+
+    <EditText
+        android:id="@+id/edt_contactUs_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:textColor="@color/mainTextColor"
+        android:hint="@string/Email"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/edt_contactUs_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:textColor="@color/mainTextColor"
+        android:hint="@string/subject"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/message"
+        android:textColor="@color/mainTextColor" />
+
+    <EditText
+        android:id="@+id/edt_contactUs_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_white_with_radius_twenty_dp"
+        android:gravity="start|top"
+        android:hint="@string/messageText"
+        android:textColor="@color/mainTextColor"
+        android:maxLines="10"
+        android:minHeight="100dp"
+        android:padding="16dp"
+        android:textSize="16sp" />
+
+
+
+
+
+    <Button
+        android:id="@+id/btn_contactUs_send"
+
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/shape_purple_top_tweenty_redius"
+        android:gravity="center"
+        android:onClick="contactUsSend"
+        android:text="@string/send"
+        android:textColor="@android:color/white" />
+
+
+
+
+
+
+</LinearLayout>
+
+
+
+</RelativeLayout>

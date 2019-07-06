@@ -36,4 +36,35 @@ Presented To : \n Dr. Ahmed Al Mazyad</string>
     <string name="successDetials">This product is a original product from the manufacturerYou can know more details if you pressing on the product details</string>
     <string name="productDetails">Product details</string>
     <string name="rescan">Rescan</string>
+    <string name="callUs">Call us</string>
+    <string name="send">Send</string>
+
+    <string name="messageText">Message text...</string>
+    <string name="subject">Subject</string>
+    <string name="message">Message</string>
+    <string name="Email">Email</string>
+    <!--- - - - - - - - - validation - - - - - - - - - - - - -  -->
+
+    <string name="EnterPass">Enter the password</string>
+    <string name="invalidPass">Invalid password</string>
+
+    <string name="passConfirm">Enter confirm password</string>
+    <string name="passMatchat">Password not matching</string>
+    <string name="EnterNamge">Enter Your  userName</string>
+    <string name="enterFirstName">Enter Your First Name</string>
+
+
+    <string name="enterLastName">Enter Your Last Name</string>
+
+    <string name="shortName">The name is too short</string>
+    <string name="EnterNumber">Enter your phone number</string>
+    <string name="invalidNumber">Invalid phone number</string>
+    <string name="EnterEmail">Enter the email address</string>
+    <string name="invalidEmail">Please enter a valid email</string>
+
+    <string name="invalidName">Invalid User Name</string>
+    <string name="empity">Please enter data</string>
+
+
+    <!--- - - - - - - - - - - - - - - - - - - - - - -  -->
 </resources>

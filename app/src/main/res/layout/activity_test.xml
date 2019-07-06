@@ -7,7 +7,7 @@
     tools:context=".ui.activity.Test">
 
 
-    <fragment
+  <!--  <fragment
         android:id="@+id/barcode_fragment"
         android:name="info.androidhive.barcode.BarcodeReader"
         android:layout_width="match_parent"
@@ -16,5 +16,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:use_flash="false" />
+        app:use_flash="false" />-->
+
+
+
 </android.support.constraint.ConstraintLayout>

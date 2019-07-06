@@ -19,7 +19,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.activity.ScanActivity"></activity>
+        <activity android:name=".ui.activity.ScannerActivity"></activity>
+        <activity
+            android:name=".ui.activity.ContactUsActivity"
+            android:theme="@style/noActionBar"></activity>
+        <activity android:name=".ui.activity.ScanActivity" />
         <activity android:name=".ui.activity.Test" />
         <activity
             android:name=".ui.activity.SplashActivity"

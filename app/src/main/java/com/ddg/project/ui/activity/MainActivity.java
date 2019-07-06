@@ -31,6 +31,7 @@ import com.ddg.project.helper.BottomNavigationViewHelper;
 import com.ddg.project.model.Products;
 import com.ddg.project.ui.fragment.HomeFragment;
 import com.ddg.project.ui.fragment.MoreFragment;
+import com.ddg.project.ui.fragment.ScanFragment;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.jaeger.library.StatusBarUtil;
 
@@ -54,12 +55,15 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
         setContentView(R.layout.activity_main);
         barcodeReader = (BarcodeReader) getSupportFragmentManager().findFragmentById(R.id.barcode_fragment);
 
-
         StatusBarUtil.setTransparent(MainActivity.this);
 
         init();
 
+
+
     }
+
+
 
     //init method to set initial value
     private void init() {
@@ -171,14 +175,14 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
                     return true;
                 case R.id.botm_nav_scan:
 
-                    if (isPermissionGranted()) {
+              /*      if (isPermissionGranted()) {
 
                         homeFlActivityFrameContainer.setVisibility(View.GONE);
                         scanContainer.setVisibility(View.VISIBLE);
 
 
-                    }
-//                    loadFragment(new ScanFragment(MainActivity.this));
+                    }*/
+                    loadFragment(new ScanFragment(MainActivity.this));
 
                     return true;
                 case R.id.botm_nav_more:
@@ -227,11 +231,11 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
     public void onScanned(final Barcode barcode) {
         // play beep sound
         barcodeReader.playBeep();
+
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 Toast.makeText(MainActivity.this, barcode.displayValue, Toast.LENGTH_LONG).show();
-
                 if (barcode.displayValue.equals(Products.product1) || barcode.displayValue.equals(Products.product2)) {
 
                     final Dialog dialog2 = new Dialog(MainActivity.this);
@@ -309,7 +313,9 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
 
             }
         });
-        int x = 0;
+
+        barcodeReader.pauseScanning();
+
     }
 
     @Override

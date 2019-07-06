@@ -37,5 +37,35 @@
     <string name="successDetials">This product is a original product from the manufacturerYou can know more details if you pressing on the product details</string>
     <string name="productDetails">Product details</string>
     <string name="rescan">Rescan</string>
+    <string name="callUs">Call us</string>
+    <string name="send">Send</string>
+
+    <string name="subject">عنوان الرسالة</string>
+    <string name="message">الرسالة</string>
+    <string name="messageText">نص الرسالة...</string>
+    <string name="Email">البريد الالكترونى</string>
+
+    <!--- - - - - - - - - validation - - - - - - - - - - - - -  -->
+
+    <string name="EnterPass">من فضلك قم بادخال كلمة المرور</string>
+    <string name="invalidPass">كلمة المرور غير صحيحة</string>
+
+    <string name="passConfirm">من فضلك قم بتاكيد كلمة المرور</string>
+    <string name="passMatchat">كلمة المرور غير متطابقة</string>
+    <string name="EnterNamge">من فضلك قم بادخال  اسم المستخدم</string>
+    <string name="enterFirstName">من فضلك قم بادخال الاسم الاول</string>
+    <string name="enterLastName">من فضلك قم بادخال الاسم الاخير</string>
+
+    <string name="shortName">الاسم قصير </string>
+    <string name="EnterNumber">من فضلك قم بادخال رقم الجوال</string>
+    <string name="invalidNumber">رقم جوال غير صحيح</string>
+    <string name="EnterEmail">يرجى ادخال البريد الالكتروني</string>
+    <string name="invalidEmail">من فضلك قم بإدخال البريد الكتروني صحيح</string>
+
+    <string name="invalidName">من فضلك قم بإدخال اسم صحيح</string>
+    <string name="empity">من فضلك ادخل بيانات</string>
+    <!--- - - - - - - - -  - - - - - - - - - - - - -  -->
+
+
 
 </resources>

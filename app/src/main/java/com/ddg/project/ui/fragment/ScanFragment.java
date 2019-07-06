@@ -63,7 +63,7 @@ public class ScanFragment extends Fragment implements BarcodeReader.BarcodeReade
         View inflate = inflater.inflate(R.layout.fragment_scan, container, false);
 
         barcodeReader = (BarcodeReader) getActivity().getSupportFragmentManager().findFragmentById(R.id.barcode_fragment);
-
+//        IntentIntegrator.forSupportFragment(this).initiateScan();
 
         btnScan = inflate.findViewById(R.id.btn_scan);
         rbScanFlashLight = inflate.findViewById(R.id.rb_scan_flashLight);
@@ -149,7 +149,7 @@ public class ScanFragment extends Fragment implements BarcodeReader.BarcodeReade
 
 
             if (scanResultContents != null) {
-                Toast.makeText(getContext(), scanResultContents, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getActivity(), scanResultContents, Toast.LENGTH_SHORT).show();
 
             } else {
 
@@ -211,6 +211,7 @@ public class ScanFragment extends Fragment implements BarcodeReader.BarcodeReade
 
     }
 
+/*
 
     @Override
     public void onScanned(Barcode barcode) {
@@ -218,7 +219,6 @@ public class ScanFragment extends Fragment implements BarcodeReader.BarcodeReade
         final String displayValue = barcode.displayValue;
         // play beep sound
         barcodeReader.playBeep();
-
 
         activity.runOnUiThread(new Runnable() {
             @Override
@@ -228,6 +228,12 @@ public class ScanFragment extends Fragment implements BarcodeReader.BarcodeReade
             }
         });
         int x = 0;
+    }
+*/
+
+    @Override
+    public void onScanned(Barcode barcode) {
+
     }
 
     @Override

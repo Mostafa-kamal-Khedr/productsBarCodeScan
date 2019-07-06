@@ -34,7 +34,7 @@ dependencies {
     implementation 'com.jaeger.statusbarutil:library:1.5.1'
 
     //barcode
-    implementation 'com.journeyapps:zxing-android-embedded:3.4.0'
+    implementation 'com.journeyapps:zxing-android-embedded:3.5.0'
 
 
     implementation 'me.dm7.barcodescanner:zxing:1.9.13'
@@ -44,6 +44,5 @@ dependencies {
 
 
     implementation 'com.github.Tetr4:ZXingView:v1.1.0'
-
 
 }

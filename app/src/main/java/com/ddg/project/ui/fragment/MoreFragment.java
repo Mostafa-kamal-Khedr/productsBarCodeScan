@@ -18,6 +18,7 @@ import android.widget.TextView;
 import com.ddg.project.R;
 import com.ddg.project.helper.LanguageUtil;
 import com.ddg.project.helper.SharedPreferenceManager;
+import com.ddg.project.ui.activity.ContactUsActivity;
 import com.ddg.project.ui.activity.MainActivity;
 
 /**
@@ -108,6 +109,8 @@ public class MoreFragment extends Fragment implements View.OnClickListener {
                 setAboutUsDialog();
                 break;
             case R.id.tv_contactUs:
+
+                getActivity().startActivity(new Intent(getActivity(), ContactUsActivity.class));
                 break;
             case R.id.tv_rateApp:
 
