@@ -36,7 +36,6 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
 import com.google.android.gms.common.GooglePlayServicesRepairableException;
 import com.google.android.gms.common.api.GoogleApiClient;
-
 import com.google.android.gms.common.api.PendingResult;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -60,11 +59,6 @@ import com.google.android.gms.tasks.Task;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-
-
-
-
 
 
 
@@ -467,20 +461,8 @@ int x=0;
 
         if (mLocatiomPermissionGranted) {
 
-            if (activity.equals("Profile")) {
+            getDeviceLocation();
 
-
-                if (getIntent().getFloatExtra("lat", 0) != 0) {
-                    float lat = getIntent().getFloatExtra("lat", 0);
-                    float longitude = getIntent().getFloatExtra("long", 0);
-                    moveCamera(new LatLng(lat, longitude), DEFAULT_ZOOM);
-                } else {
-                    getDeviceLocation();
-                }
-            } else if (activity.equals("SignUp")) {
-                getDeviceLocation();
-
-            }
 //todo new location map
 //            mapmap();
 

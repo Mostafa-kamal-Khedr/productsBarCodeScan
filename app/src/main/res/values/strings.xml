@@ -76,5 +76,7 @@ Presented To : \n Dr. Ahmed Al Mazyad</string>
 
     <string name="enterMapAddress">Enter the address, city, or postal code</string>
     <string name="add">Add</string>
+    <string name="title_activity_maps2">Map</string>
+    <string name="title_activity_maps3">Map</string>
 
 </resources>
