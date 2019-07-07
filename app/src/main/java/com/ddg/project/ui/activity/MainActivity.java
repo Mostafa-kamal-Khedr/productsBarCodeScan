@@ -225,7 +225,7 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
         }
     }
 
-
+// success dialog when barcode is original
     private void openSuccessDialog(final Barcode barcode) {
         final Dialog dialog2 = new Dialog(MainActivity.this);
 
@@ -260,6 +260,8 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
         dialog2.show();
 
     }
+
+    // report dialog when barcode is fake
 
     private void openFakeDialog() {
 
@@ -310,6 +312,11 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
     }
 
 
+    /**
+     * override method
+     * this method to get data after scan
+     * @param barcode
+     */
     @Override
     public void onScanned(final Barcode barcode) {
         // play beep sound

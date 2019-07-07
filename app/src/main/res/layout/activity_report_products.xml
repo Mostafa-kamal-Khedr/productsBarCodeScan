@@ -66,6 +66,7 @@
                     android:drawableTop="@drawable/ic_add"
                     android:drawablePadding="12dp"
                     android:paddingStart="14dp"
+                    android:onClick="openCamera"
                     android:paddingTop="20dp"
                     android:paddingEnd="14dp"
                     android:paddingBottom="20dp"

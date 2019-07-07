@@ -43,8 +43,8 @@ public class ReportProductsActivity extends AppCompatActivity {
         onBackPressed();
     }
 
-
-    public void openCamer(View view) {
+    // open phone camera
+    public void openCamera(View view) {
 
         if (isPermissionGranted()) {
 
@@ -54,7 +54,7 @@ public class ReportProductsActivity extends AppCompatActivity {
 
     }
 
-
+//check user accept permission or not
     public boolean isPermissionGranted() {
         if (Build.VERSION.SDK_INT >= 23) {
             if (checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
@@ -71,6 +71,8 @@ public class ReportProductsActivity extends AppCompatActivity {
             return true;
         }
     }
+
+    // result after permission
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
@@ -98,6 +100,8 @@ public class ReportProductsActivity extends AppCompatActivity {
 
     }
 
+
+    // open user camera to pic image
     public void onImageClicked() {
 
 
@@ -109,6 +113,8 @@ public class ReportProductsActivity extends AppCompatActivity {
     }
 
 
+
+    // result after camera shooting
     @Override
     protected void onActivityResult(int requestCode, int resultCode, final Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -117,8 +123,6 @@ public class ReportProductsActivity extends AppCompatActivity {
         if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
             if (resultCode == RESULT_OK) {
-
-
 
 
             } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {

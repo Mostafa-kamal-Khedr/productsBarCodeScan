@@ -15,7 +15,7 @@ import com.ddg.project.helper.Validation;
 
 public class ContactUsActivity extends AppCompatActivity {
 
-    private EditText contactUsSubject,contactUsEmail,contactUsMessage;
+    private EditText contactUsSubject, contactUsEmail, contactUsMessage;
     private Validation validation;
 
 
@@ -29,6 +29,8 @@ public class ContactUsActivity extends AppCompatActivity {
         init();
     }
 
+
+    // components initial value
     private void init() {
         validation = new Validation(ContactUsActivity.this);
 
@@ -37,6 +39,7 @@ public class ContactUsActivity extends AppCompatActivity {
         contactUsMessage = findViewById(R.id.edt_contactUs_message);
     }
 
+    // delete android app bar and create custom one
     private void inflateAppBar() {
 
 
@@ -49,9 +52,10 @@ public class ContactUsActivity extends AppCompatActivity {
 
     public void contactUsSend(View view) {
 
-                       validation();
+        validation();
     }
 
+    // input validation
     public void validation() {
 
 
@@ -65,6 +69,7 @@ public class ContactUsActivity extends AppCompatActivity {
 
     }
 
+    // set email setting and open g-mail
     private void sendEmail() {
 
         Intent send = new Intent(Intent.ACTION_SENDTO);

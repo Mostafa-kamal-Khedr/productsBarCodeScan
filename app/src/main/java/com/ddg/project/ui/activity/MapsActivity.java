@@ -61,7 +61,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleApiClient.OnConnectionFailedListener {
 
     private static final int LOCATION_PERMISSION_RESUILT_CODE = 123;
@@ -122,6 +121,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
 
+    // set permission to access user current location
     private void getLocationPermission() {
 
         String[] permissions = {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION};
@@ -145,13 +145,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
+
+    // get user current location
     private void getDeviceLocation() {
         mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
 
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
         if (locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
-int x=0;
 
             try {
 
@@ -196,6 +197,8 @@ int x=0;
         // end of checkLocationIsEnabled condition
     } // end of getDeviceLocation method
 
+
+    // move map camera to the new location
     private void moveCamera(LatLng latLng, float zoom) {
 
 
@@ -247,7 +250,7 @@ int x=0;
 
         HideKeyBoard.hideSoftKeyboard(MapsActivity.this);
 
-
+//
         saveUserLocation();
 
     }
@@ -295,7 +298,7 @@ int x=0;
 
     }
 
-
+// set initial data
     private void init() {
 
 
@@ -391,6 +394,8 @@ int x=0;
 
     }
 
+
+    // get user address
     private void geoLocate() {
 
         String searchString = mSearchText.getText().toString();
