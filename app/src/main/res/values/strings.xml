@@ -89,5 +89,6 @@ Presented To : \n Dr. Ahmed Al Mazyad</string>
     <string name="location">Location</string>
     <string name="storeDescription">Store description</string>
     <string name="sendReport">Send report</string>
+    <string name="reportProducts">Report product</string>
 
 </resources>

@@ -174,14 +174,14 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
                     return true;
                 case R.id.botm_nav_scan:
 
-              /*      if (isPermissionGranted()) {
+                    if (isPermissionGranted()) {
 
                         homeFlActivityFrameContainer.setVisibility(View.GONE);
                         scanContainer.setVisibility(View.VISIBLE);
 
+//                        loadFragment(new ScanFragment(MainActivity.this));
 
-                    }*/
-                    loadFragment(new ScanFragment(MainActivity.this));
+                    }
 
                     return true;
                 case R.id.botm_nav_more:
@@ -225,33 +225,6 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
         }
     }
 
-
-    @Override
-    public void onScanned(final Barcode barcode) {
-        // play beep sound
-        barcodeReader.playBeep();
-
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                Toast.makeText(MainActivity.this, barcode.displayValue, Toast.LENGTH_LONG).show();
-                if (barcode.displayValue.equals(Products.product1) || barcode.displayValue.equals(Products.product2)) {
-                    openSuccessDialog(barcode);
-
-
-                } else {
-
-                    openFakeDialog();
-
-
-                }
-
-            }
-        });
-
-        barcodeReader.pauseScanning();
-
-    }
 
     private void openSuccessDialog(final Barcode barcode) {
         final Dialog dialog2 = new Dialog(MainActivity.this);
@@ -336,6 +309,34 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
 
     }
 
+
+    @Override
+    public void onScanned(final Barcode barcode) {
+        // play beep sound
+        barcodeReader.playBeep();
+
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Toast.makeText(MainActivity.this, barcode.displayValue, Toast.LENGTH_LONG).show();
+                if (barcode.displayValue.equals(Products.product1) || barcode.displayValue.equals(Products.product2)|| barcode.displayValue.equals(Products.product3)) {
+                    openSuccessDialog(barcode);
+
+
+                } else {
+
+                    openFakeDialog();
+
+
+                }
+
+            }
+        });
+
+//        barcodeReader.pauseScanning();
+
+    }
+
     @Override
     public void onScannedMultiple(List<Barcode> list) {
 
@@ -353,6 +354,6 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
 
     @Override
     public void onCameraPermissionDenied() {
-        Toast.makeText(MainActivity.this, "Camera permission denied!", Toast.LENGTH_LONG).show();
+//        Toast.makeText(MainActivity.this, "Camera permission denied!", Toast.LENGTH_LONG).show();
     }
 }
