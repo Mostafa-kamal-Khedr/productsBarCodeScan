@@ -78,5 +78,16 @@ Presented To : \n Dr. Ahmed Al Mazyad</string>
     <string name="add">Add</string>
     <string name="title_activity_maps2">Map</string>
     <string name="title_activity_maps3">Map</string>
+    <string name="productInfo">Product Info</string>
+    <string name="addPhoto">Add photo</string>
+    <string name="productPhotos">Products Photos</string>
+    <string name="productName">ProductName</string>
+    <string name="productBarCode">Product barcode</string>
+    <string name="productDescription">Product description</string>
+    <string name="storeInfo">Store info</string>
+    <string name="storeName">Store name</string>
+    <string name="location">Location</string>
+    <string name="storeDescription">Store description</string>
+    <string name="sendReport">Send report</string>
 
 </resources>

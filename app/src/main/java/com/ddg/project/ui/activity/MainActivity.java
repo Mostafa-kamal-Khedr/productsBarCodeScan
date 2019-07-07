@@ -61,9 +61,7 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
         init();
 
 
-
     }
-
 
 
     //init method to set initial value
@@ -238,30 +236,47 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
             public void run() {
                 Toast.makeText(MainActivity.this, barcode.displayValue, Toast.LENGTH_LONG).show();
                 if (barcode.displayValue.equals(Products.product1) || barcode.displayValue.equals(Products.product2)) {
+                    openSuccessDialog(barcode);
 
-                    final Dialog dialog2 = new Dialog(MainActivity.this);
 
-                    dialog2.requestWindowFeature(Window.FEATURE_NO_TITLE);
-                    dialog2.setContentView(R.layout.dialog_success);
-                    dialog2.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                    TextView tvDialogProductDetails = dialog2.findViewById(R.id.tv_dialog_productDetails);
-                    tvDialogProductDetails.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
+                } else {
 
-                            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.buycott.com/upc/" + barcode.displayValue));
-                            intent.putExtra(SearchManager.QUERY, barcode.displayValue);
+                    openFakeDialog();
 
-                            startActivity(intent);
-                        }
-                    });
-                    TextView tv_dialog_rescan = dialog2.findViewById(R.id.tv_dialog_rescan);
-                    tv_dialog_rescan.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            dialog2.dismiss();
-                        }
-                    });
+
+                }
+
+            }
+        });
+
+        barcodeReader.pauseScanning();
+
+    }
+
+    private void openSuccessDialog(final Barcode barcode) {
+        final Dialog dialog2 = new Dialog(MainActivity.this);
+
+        dialog2.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog2.setContentView(R.layout.dialog_success);
+        dialog2.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        TextView tvDialogProductDetails = dialog2.findViewById(R.id.tv_dialog_productDetails);
+        tvDialogProductDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.buycott.com/upc/" + barcode.displayValue));
+                intent.putExtra(SearchManager.QUERY, barcode.displayValue);
+
+                startActivity(intent);
+            }
+        });
+        TextView tv_dialog_rescan = dialog2.findViewById(R.id.tv_dialog_rescan);
+        tv_dialog_rescan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog2.dismiss();
+            }
+        });
            /* ImageView ivAboutUsBack = dialog2.findViewById(R.id.iv_aboutUsBack);
             ivAboutUsBack.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -269,35 +284,45 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
                     dialog2.dismiss();
                 }
             });*/
-                    dialog2.show();
+        dialog2.show();
 
-                } else {
-                    final Dialog dialog2 = new Dialog(MainActivity.this);
+    }
 
-                    dialog2.requestWindowFeature(Window.FEATURE_NO_TITLE);
-                    dialog2.setContentView(R.layout.dialog_success);
-                    dialog2.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+    private void openFakeDialog() {
 
-                    ImageView ivDialogSuccess = dialog2.findViewById(R.id.iv_dialog_success);
-                    ivDialogSuccess.setImageResource(R.drawable.ic_error);
+        final Dialog dialog2 = new Dialog(MainActivity.this);
 
-                    TextView tv_dialog_successDetails = dialog2.findViewById(R.id.tv_dialog_successDetails);
-                    tv_dialog_successDetails.setText("This product is a non-genuine and unlicensed product from the manufacturer, contributed to the disposal of Fake products by pressing Report product");
+        dialog2.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog2.setContentView(R.layout.dialog_success);
+        dialog2.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        ImageView ivDialogSuccess = dialog2.findViewById(R.id.iv_dialog_success);
+        ivDialogSuccess.setImageResource(R.drawable.ic_error);
+
+        TextView tv_dialog_successDetails = dialog2.findViewById(R.id.tv_dialog_successDetails);
+        tv_dialog_successDetails.setText("This product is a non-genuine and unlicensed product from the manufacturer, contributed to the disposal of Fake products by pressing Report product");
 
 
-                    TextView tv_dialog_original = dialog2.findViewById(R.id.tv_dialog_original);
-                    tv_dialog_original.setText("Fake Product");
+        TextView tv_dialog_original = dialog2.findViewById(R.id.tv_dialog_original);
+        tv_dialog_original.setText("Fake Product");
 
-                    TextView tvDialogProductDetails = dialog2.findViewById(R.id.tv_dialog_productDetails);
-                    tvDialogProductDetails.setText("Report Product");
-                    TextView tv_dialog_rescan = dialog2.findViewById(R.id.tv_dialog_rescan);
-                    tv_dialog_rescan.setText("Cancel");
-                    tv_dialog_rescan.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            dialog2.dismiss();
-                        }
-                    });
+
+        TextView tvDialogProductDetails = dialog2.findViewById(R.id.tv_dialog_productDetails);
+        tvDialogProductDetails.setText("Report Product");
+        tvDialogProductDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, ReportProductsActivity.class));
+            }
+        });
+        TextView tv_dialog_rescan = dialog2.findViewById(R.id.tv_dialog_rescan);
+        tv_dialog_rescan.setText("Cancel");
+        tv_dialog_rescan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog2.dismiss();
+            }
+        });
 
 /*
             ivAboutUsBack.setOnClickListener(new View.OnClickListener() {
@@ -307,15 +332,7 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
                 }
             });
 */
-                    dialog2.show();
-
-
-                }
-
-            }
-        });
-
-        barcodeReader.pauseScanning();
+        dialog2.show();
 
     }
 

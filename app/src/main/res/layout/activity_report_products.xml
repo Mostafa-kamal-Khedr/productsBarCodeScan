@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.ReportProductsActivity">
+    <!--start of appBarContainer-->
+    <RelativeLayout
+        android:id="@+id/BarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <include
+            android:id="@+id/custom_appBar"
+            layout="@layout/app_bar" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/BarContainer">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:background="@color/gray"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingStart="14dp"
+                android:text="@string/productInfo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:paddingStart="14dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+
+                    android:text="@string/productPhotos"
+                    android:textColor="@color/mainTextColor"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/white_border"
+                    android:drawableTop="@drawable/ic_share"
+                    android:drawablePadding="12dp"
+                    android:paddingStart="14dp"
+                    android:paddingTop="20dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="20dp"
+                    android:text="@string/addPhoto"
+                    android:textColor="@color/colorPrimary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="18dp"
+                    android:background="@color/darkerGray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    android:text="@string/productDetails"
+                    android:textColor="@color/mainTextColor"
+                    android:textSize="15sp" />
+
+
+                <EditText
+                    android:id="@+id/edt_productName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="4dp"
+                    android:hint="@string/productName"
+
+                    android:textColor="@color/mainTextColor" />
+
+                <EditText
+                    android:id="@+id/edt_productBarCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+
+                    android:layout_marginBottom="4dp"
+                    android:hint="@string/productBarCode"
+                    android:textColor="@color/mainTextColor" />
+
+                <EditText
+                    android:id="@+id/edt_productDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="4dp"
+                    android:hint="@string/productDescription"
+                    android:textColor="@color/mainTextColor" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="14dp"
+                android:paddingStart="14dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/storeInfo"
+                android:textSize="15sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:paddingStart="14dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp">
+
+
+                <EditText
+                    android:id="@+id/edt_storeName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="4dp"
+                    android:hint="@string/storeName"
+
+                    android:textColor="@color/mainTextColor" />
+
+                <EditText
+                    android:id="@+id/edt_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+
+                    android:layout_marginBottom="4dp"
+                    android:hint="@string/location"
+                    android:textColor="@color/mainTextColor" />
+
+                <EditText
+                    android:id="@+id/edt_storeDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="4dp"
+                    android:hint="@string/storeDescription"
+                    android:textColor="@color/mainTextColor" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="28dp"
+                android:background="@drawable/shape_purple_top_tweenty_redius"
+                android:text="@string/sendReport"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>
