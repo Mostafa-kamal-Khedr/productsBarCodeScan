@@ -27,10 +27,10 @@
     <string name="english">English</string>
     <string name="appLanguage">Languages</string>
     <string name="whoWeAre">Who We Are?</string>
-    <string name="whoWeAreSubTitle">DDG is a non business project ,\n It is considered as student  graduation project \n based on a bar code tool authentication for  specific  \n
-    products such as make up , perfumes , skin and hair care \n products to be checked if it is original or fake and report \n for the fake and useful for limitation the Commercial Fraud.    \n \n
+    <string name="whoWeAreSubTitle">DDG is a non business project , It is considered as student  graduation project  based on a bar code tool authentication for  specific
+    products such as make up , perfumes , skin and hair care  products to be checked if it is original or fake and report  for the fake and useful for limitation the Commercial Fraud.    \n \n
 
-Created by :\n Dana.\n Dalal. \n Ghazwah.    \n \n
+Created by :\n Dana AlQattan.\n Dalal Alhuwaidi. \n Ghazwah Almutairi.    \n \n
 Presented To : \n Dr. Ahmed Al Mazyad</string>
     <string name="OriginalProduct">Original Product</string>
     <string name="successDetials">This product is a original product from the manufacturerYou can know more details if you pressing on the product details</string>

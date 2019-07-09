@@ -79,7 +79,8 @@ public class ReportProductsActivity extends AppCompatActivity {
             String userMapAddress = sharedPreferenceManager.loadUserMapAddress();
             edtLocation.setText(userMapAddress);
 
-        }    if (sharedPreferenceManager.loadUserImage() != null) {
+        }
+        if (sharedPreferenceManager.loadUserImage() != null) {
             String loadUserImage = sharedPreferenceManager.loadUserImage();
             Glide.with(ReportProductsActivity.this).load(loadUserImage).into(ivReportImageOfProduct);
 
@@ -223,7 +224,7 @@ public class ReportProductsActivity extends AppCompatActivity {
                 resultUri = result.getUri();
                 ivReportImageOfProduct.setVisibility(View.VISIBLE);
                 Glide.with(ReportProductsActivity.this).load(resultUri).into(ivReportImageOfProduct);
-                                          sharedPreferenceManager.changeUserImage(resultUri.toString(),"notNull");
+                sharedPreferenceManager.changeUserImage(resultUri.toString(), "notNull");
             } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
                 Toast.makeText(this, "Error in upload Image", Toast.LENGTH_SHORT).show();
             }

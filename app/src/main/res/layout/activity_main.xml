@@ -53,6 +53,7 @@
                 android:background="@drawable/ic_scan_selector"
                 android:button="@android:color/transparent"
                 android:checked="false"
+                android:visibility="gone"
                 android:gravity="center" />
 
 

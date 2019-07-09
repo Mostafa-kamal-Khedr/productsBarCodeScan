@@ -20,7 +20,7 @@ public class Products {
     public String OFRAEyeshadowPeach = "OFRA Eyeshadow Peach";
     public String OFRALiplinerMauve = "OFRA Lipliner Mauve";
     public String OFRALipstick101 = "OFRA Lipstick 101";
-    //    __________________
+
     public String theBalmMaryLouManizerLuminizer = "the Balm Mary-Lou Manizer Luminizer ";
     public String theBalmgetönteTagescremeBalmShelterTintedMoisturizerMedium = "theBalm getönte Tagescreme Balm Shelter Tinted Moisturizer,Medium";
     public String theBalmManizerKit = "theBalm Manizer Kit";
@@ -162,6 +162,8 @@ public class Products {
 
         return barCodeList;
     }
+
+
 
 
 }
