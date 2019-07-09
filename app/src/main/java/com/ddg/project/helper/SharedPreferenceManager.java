@@ -16,6 +16,7 @@ public class SharedPreferenceManager {
 
     private static String LANGUAGE = "selectedLanguage";
     public static String PREFS = "PREFS";
+    private static String USER_IMAGE = "userImage";
 
     private static final String USER_ADDRESS = "userAddress";
     private static final String CATEGORY_NAME = "categoryName";
@@ -191,4 +192,22 @@ public class SharedPreferenceManager {
         return sharedPreferences.getString(USER_MAPADDRESS, null);
     }
 
+    public void changeUserImage(String userImage, String notNull) {
+        SharedPreferences.Editor myEditor = sharedPreferences.edit();
+        myEditor.putString(USER_IMAGE, userImage);
+        myEditor.apply();
+        myEditor.commit();
+    }
+
+    public String loadUserImage() {
+        return sharedPreferences.getString(USER_IMAGE, null);
+    }
+
+
+    public void cleanSignUpImages() {
+        SharedPreferences.Editor myEditor = sharedPreferences.edit();
+        myEditor.remove(USER_IMAGE);
+
+        myEditor.commit();
+    }
 }

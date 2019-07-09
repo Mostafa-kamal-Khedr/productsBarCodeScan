@@ -29,18 +29,8 @@ import butterknife.ButterKnife;
 
 public class ReportProductsActivity extends AppCompatActivity {
     private static final int RequestPermissionCode = 1;
-    @BindView(R.id.appbar_title)
-    TextView appbarTitle;
-    @BindView(R.id.ic_brand)
-    ImageView icBrand;
-    @BindView(R.id.iv_back)
-    ImageView ivBack;
-    @BindView(R.id.customAppBar_c)
-    RelativeLayout customAppBarC;
-    @BindView(R.id.custom_toolbar)
-    Toolbar customToolbar;
-    @BindView(R.id.BarContainer)
-    RelativeLayout BarContainer;
+
+
     @BindView(R.id.iv_report)
     ImageView ivReport;
     @BindView(R.id.edt_productName)
@@ -79,6 +69,21 @@ public class ReportProductsActivity extends AppCompatActivity {
 
         }
 
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (sharedPreferenceManager.loadUserMapAddress() != null) {
+            String userMapAddress = sharedPreferenceManager.loadUserMapAddress();
+            edtLocation.setText(userMapAddress);
+
+        }    if (sharedPreferenceManager.loadUserImage() != null) {
+            String loadUserImage = sharedPreferenceManager.loadUserImage();
+            Glide.with(ReportProductsActivity.this).load(loadUserImage).into(ivReportImageOfProduct);
+
+        }
 
     }
 
@@ -215,10 +220,10 @@ public class ReportProductsActivity extends AppCompatActivity {
         if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
             if (resultCode == RESULT_OK) {
-                resultUri = data.getData();
-
+                resultUri = result.getUri();
+                ivReportImageOfProduct.setVisibility(View.VISIBLE);
                 Glide.with(ReportProductsActivity.this).load(resultUri).into(ivReportImageOfProduct);
-
+                                          sharedPreferenceManager.changeUserImage(resultUri.toString(),"notNull");
             } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
                 Toast.makeText(this, "Error in upload Image", Toast.LENGTH_SHORT).show();
             }

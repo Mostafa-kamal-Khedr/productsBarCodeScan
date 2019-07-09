@@ -27,11 +27,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ddg.project.R;
+import com.ddg.project.db.Products;
 import com.ddg.project.helper.BottomNavigationViewHelper;
-import com.ddg.project.model.Products;
+import com.ddg.project.helper.SharedPreferenceManager;
 import com.ddg.project.ui.fragment.HomeFragment;
 import com.ddg.project.ui.fragment.MoreFragment;
-import com.ddg.project.ui.fragment.ScanFragment;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.jaeger.library.StatusBarUtil;
 
@@ -48,6 +48,9 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
     private BarcodeReader barcodeReader;
     private FrameLayout homeFlActivityFrameContainer;
     private ConstraintLayout scanContainer;
+    private Products products;
+    private List<String> productsBarCode;
+    private SharedPreferenceManager sharedPreferenceManager;
 
 
     @Override
@@ -66,13 +69,15 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
 
     //init method to set initial value
     private void init() {
+        products = new Products();
+        productsBarCode = products.getProductsBarCode();
 
         scanContainer = findViewById(R.id.scanContainer);
         homeFlActivityFrameContainer = findViewById(R.id.home_fl_activity_frame_container);
         navigation = findViewById(R.id.home_bn_home_bottom_nav);
         loadFragment(new HomeFragment());
         // disable shifting mode
-        BottomNavigationViewHelper.disableShiftMode(navigation);
+//        BottomNavigationViewHelper.disableShiftMode(navigation);
 
         //set listener to BottomNavigationView
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -176,6 +181,7 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
 
                     if (isPermissionGranted()) {
 
+
                         homeFlActivityFrameContainer.setVisibility(View.GONE);
                         scanContainer.setVisibility(View.VISIBLE);
 
@@ -225,13 +231,17 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
         }
     }
 
-// success dialog when barcode is original
+    // success dialog when barcode is original
     private void openSuccessDialog(final Barcode barcode) {
         final Dialog dialog2 = new Dialog(MainActivity.this);
 
         dialog2.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog2.setContentView(R.layout.dialog_success);
         dialog2.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+
+        TextView tv_dialog_productName = dialog2.findViewById(R.id.tv_dialog_productName);
+        tv_dialog_productName.setText(barcode.displayValue);
         TextView tvDialogProductDetails = dialog2.findViewById(R.id.tv_dialog_productDetails);
         tvDialogProductDetails.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -264,7 +274,7 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
     // report dialog when barcode is fake
 
     private void openFakeDialog() {
-
+        sharedPreferenceManager = new SharedPreferenceManager(MainActivity.this);
         final Dialog dialog2 = new Dialog(MainActivity.this);
 
         dialog2.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -287,6 +297,8 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
         tvDialogProductDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                sharedPreferenceManager.cleanUserLocation();
+                sharedPreferenceManager.cleanSignUpImages();
                 startActivity(new Intent(MainActivity.this, ReportProductsActivity.class));
             }
         });
@@ -315,6 +327,7 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
     /**
      * override method
      * this method to get data after scan
+     *
      * @param barcode
      */
     @Override
@@ -325,8 +338,10 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                Toast.makeText(MainActivity.this, barcode.displayValue, Toast.LENGTH_LONG).show();
-                if (barcode.displayValue.equals(Products.product1) || barcode.displayValue.equals(Products.product2)|| barcode.displayValue.equals(Products.product3)) {
+                String displayValue1 = barcode.displayValue;
+//                Toast.makeText(MainActivity.this, displayValue1, Toast.LENGTH_LONG).show();
+
+                if (productsBarCode.contains(displayValue1)) {
                     openSuccessDialog(barcode);
 
 
