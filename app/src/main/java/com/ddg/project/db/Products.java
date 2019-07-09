@@ -1,19 +1,18 @@
 package com.ddg.project.db;
 
-import android.graphics.Color;
+import com.ddg.project.model.ProductsModel;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 /**
  * Created by Mostafa khedr on 02,يوليو,2019
  */
 public class Products {
 
-    public static String product1="3610340017421";
-    public static String product2="6281006442924";
-    public static String product3="888066000079";
+    public static String product1 = "3610340017421";
+    public static String product2 = "6281006442924";
+    public static String product3 = "888066000079";
 
     //makeup
     public String OFRABlissfulHighlighter = "OFRA Blissful Highlighter";
@@ -68,7 +67,44 @@ public class Products {
     public String TheBodyShopMiniPapayaBodyButter = "The Body Shop Mini Papaya Body Butter";
 
 
+    public List<ProductsModel> getMakeupList() {
+
+        List<ProductsModel> makeUpList = new ArrayList<>();
+        makeUpList.add(new ProductsModel("OFRA Blissful Highlighter", "makeup1", "https://www.ofracosmetics.com/products/blissful-highlighter"));
+        makeUpList.add(new ProductsModel("OFRA Cosmetics Ofra X Manny MUA Lip Set", "makeup2", "https://www.ofracosmetics.com/products/long-lasting-liquid-lip-set-ofraxmannymua"));
+        makeUpList.add(new ProductsModel("OFRA Eyeshadow Peach", "makeup3", "https://www.ofracosmetics.com/products/blush-godet-pan-refill-peach?variant=41883718534"));
+        makeUpList.add(new ProductsModel("OFRA Lipliner Mauve", "makeup4", "https://www.ofracosmetics.com/products/lipliner-mauve"));
+        makeUpList.add(new ProductsModel("OFRA Lipstick 101", "makeup5", "https://www.ofracosmetics.com/products/lipstick-101"));
+        makeUpList.add(new ProductsModel("the Balm Mary-Lou Manizer Luminizer", "makeup6", "https://thebalm.com/products/man-681619700583"));
+        makeUpList.add(new ProductsModel("theBalm getönte Tagescreme Balm Shelter Tinted Moisturizer,Medium", "makeup7", "https://thebalm.com/products/balm-shelter-tinted-moisturizer"));
+        makeUpList.add(new ProductsModel("theBalm Manizer Kit", "makeup8", "https://thebalm.com/products/the-manizer-sisters"));
+        makeUpList.add(new ProductsModel("theBalm Meet Matte Hughes- Sincere", "makeup9", "https://thebalm.com/products/meet-matte-hughes"));
+        makeUpList.add(new ProductsModel("theBalm ShadowBlush, DownBoy", "makeup10", "https://thebalm.com/products/do-681619700514"));
+
+
+        return makeUpList;
+    }
+
+    public List<ProductsModel> getPerfumeList() {
+
+        List<ProductsModel> makeUpList = new ArrayList<>();
+        makeUpList.add(new ProductsModel("212 Carolina Herrera For Women Personal Fragrances", "perfume1", " https://www.carolinaherrera.com/nl/en/fragrances/212-fragrance/212-carolina-herrera-nyc/212-nyc/"));
+        makeUpList.add(new ProductsModel("Calvin Klien Eternity Air For Women", "perfume2", "https://www.calvinklein.co.uk/eternity-air-for-women-50-ml-eau-de-parfum-6522903200blu"));
+        makeUpList.add(new ProductsModel("Carolina Herrera - 'Good Girl' Eau De Parfum", "perfume3", "https://www.fruugo.ie/good-girl-perfume-by-carolina-herrera-30ml-edp/p-31282527-64947129"));
+        makeUpList.add(new ProductsModel("Hugo Boss Hugo Woman EdP", "perfume4", "https://www.fragrantica.com/perfume/Hugo-Boss/Hugo-Woman-Eau-de-Parfum-29314.html"));
+        makeUpList.add(new ProductsModel("Ivoire Balmain", "perfume5", "https://www.fragrantica.com/perfume/Pierre-Balmain/Ivoire-15557.html"));
+        makeUpList.add(new ProductsModel("JADORE by Christian Dior Eau De Parfum Spray 1.7 oz", "perfume6", "https://www.dior.com/en_us/products/beauty-Y0715201-jadore-eau-de-parfum"));
+        makeUpList.add(new ProductsModel("Mancera Roses Greedy", "perfume7", "https://www.fragrantica.com/perfume/Mancera/Roses-Greedy-18042.html"));
+        makeUpList.add(new ProductsModel("Roses De Chloe", "perfume8", "https://www.chloe.com/ca/fragrance_cod46467853gk.html"));
+        makeUpList.add(new ProductsModel("Tom Ford Black Orchid Eau de Parfum 100ml", "perfume9", "https://www.fragrantica.com/perfume/Tom-Ford/Black-Orchid-1018.html"));
+        makeUpList.add(new ProductsModel("Van-Cleef-Arpels", "perfume10", "https://www.fragrantica.com/perfume/Van-Cleef-Arpels/Van-Cleef-1102.html"));
+
+
+        return makeUpList;
+    }
+
     public List<String> getProductsBarCode() {
+
 
         List<String> barCodeList = new ArrayList<>();
 
@@ -126,4 +162,6 @@ public class Products {
 
         return barCodeList;
     }
+
+
 }

@@ -28,12 +28,14 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".ui.activity.ProductListActivity"   android:theme="@style/noActionBar"></activity>
         <!-- start of theartofdev.edmodo.cropper.CropImageActivity Activity -->
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
-        <activity android:name=".ui.activity.ReportProductsActivity"  android:theme="@style/noActionBar"></activity>
+        <activity
+            android:name=".ui.activity.ReportProductsActivity"
+            android:theme="@style/noActionBar" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

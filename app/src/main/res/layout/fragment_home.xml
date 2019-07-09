@@ -35,6 +35,7 @@
 
             <!--makeup-->
             <RelativeLayout
+                android:id="@+id/makeup_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_makeup">
@@ -63,6 +64,8 @@
 
             <!--perfumes-->
             <RelativeLayout
+                android:id="@+id/perfumes_container"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -90,6 +93,8 @@
             </RelativeLayout>
             <!--skinCare-->
             <RelativeLayout
+                android:id="@+id/skinCare_container"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -108,8 +113,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tv_skinCare_title"
-                    android:layout_marginLeft="30dp"
                     android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="30dp"
 
                     android:text="@string/skinCareSubTitle"
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -118,6 +123,8 @@
             </RelativeLayout>
             <!--hair-->
             <RelativeLayout
+                android:id="@+id/hair_container"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -136,8 +143,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tv_hair_title"
-                    android:layout_marginLeft="30dp"
                     android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="30dp"
 
 
                     android:text="@string/hairSubTitle"
