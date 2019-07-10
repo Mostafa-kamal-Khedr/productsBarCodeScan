@@ -103,6 +103,27 @@ public class Products {
         return makeUpList;
     }
 
+
+    public List<ProductsModel> getHairList() {
+
+
+        List<ProductsModel> hairList = new ArrayList<>();
+
+        hairList.add(new ProductsModel("Bioluxe Styling Gel", "hair1","https://www.amazon.com/BioLuxe-Sculpting-Styling-Gel-Fl/dp/B0083A897K" ));
+        hairList.add(new ProductsModel("Clear Scalp & Hair Therapy Nourishing Anti-dandruff Shampoo", "hair2","https://www.amazon.in/Therapy-Nourishing-Anti-Dandruff-Shampoo-Complete/dp/B01NCBN9WY" ));
+        hairList.add(new ProductsModel("Dove hair therapy oil replacement", "hair3","https://www.dove.com/sa/en/hair-care/hair-oil/hair-fall-rescue-oil-replacement.html" ));
+        
+        hairList.add(new ProductsModel("Elvive extraordinary oil", "hair4", "https://ounousareviews.com/product/hair/loreal-paris-elvive-extraordinary-oil-replacement/"));
+        hairList.add(new ProductsModel("Garnier Fructis Style Curl Scrunch Gel","hair5" ,"https://www.garnierusa.com/about-our-brands/fructis-style/curls/curl-scrunch-controlling-gel" ));
+        hairList.add(new ProductsModel("Garnier Nutrisse Nourishing Color Creme", "hair6","https://www.garnierusa.com/about-our-brands/hair-color/nutrisse-color-creme/nourishing-color-creme-92-light-buttery-blonde" ));
+        hairList.add(new ProductsModel("Garnier Nutrisse Ultra Color","hair7" ,"https://www.garnierusa.com/about-our-brands/hair-color/nutrisse-ultra-color/ultra-color-br1-deepest-intense-burgundy" ));
+        hairList.add(new ProductsModel("Orofluido Mask (250ml)","hair8" ,"https://www.amazon.com/Orofluido-Beauty-Mask-8-45-250/dp/B004QBRX5Y?th=1" ));
+        hairList.add(new ProductsModel("Orofluido-Beauty-Elixir-Your-Hair","hair9" ,"https://www.amazon.com/Orofluido-Beauty-Elixir-Your-Hair/dp/B00CVT6ZU2" ));
+        hairList.add(new ProductsModel("Pantene Damage Detox Conditioner","hair10" , "https://www.amazon.com/Pantene-Damage-Revitalizing-Shampoo-12-600-Fluid/dp/B00FKSWNRK"));
+
+        return hairList;
+    }
+
     public List<String> getProductsBarCode() {
 
 
@@ -162,8 +183,6 @@ public class Products {
 
         return barCodeList;
     }
-
-
 
 
 }

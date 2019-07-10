@@ -51,7 +51,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
         final String productLink = productsModelList.get(position).getProductLink();
         String productName = productsModelList.get(position).getProductName();
 
-        Glide.with(context).load(getImage(productImage)).apply(ImageDialog.getRewuestOption())
+        Glide.with(context).load(ImageDialog.getImage(productImage,context)).apply(ImageDialog.getRewuestOption())
                 .into(viewHolder.ivProductList);
         viewHolder.tvProductList.setText(productName);
 
@@ -86,10 +86,5 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
         }
     }
 
-    public int getImage(String imageName) {
 
-        int drawableResourceId = context.getResources().getIdentifier(imageName, "drawable", context.getPackageName());
-
-        return drawableResourceId;
-    }
 }

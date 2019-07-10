@@ -28,7 +28,9 @@ public class ContactUsActivity extends AppCompatActivity {
         inflateAppBar();
         init();
     }
-
+    public void onBackPress(View view) {
+        super.onBackPressed();
+    }
 
     // components initial value
     private void init() {

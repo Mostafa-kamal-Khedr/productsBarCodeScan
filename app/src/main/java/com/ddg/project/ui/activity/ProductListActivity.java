@@ -5,11 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.TextView;
 
 import com.ddg.project.R;
 import com.ddg.project.adapter.ProductListAdapter;
 import com.ddg.project.db.Products;
+import com.ddg.project.helper.SpacesItemDecoration;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -29,7 +31,9 @@ public class ProductListActivity extends AppCompatActivity {
         setRecycler();
 
     }
-
+    public void onBackPress(View view) {
+        super.onBackPressed();
+    }
     private void inflateLayOut() {
         ButterKnife.bind(this);
         category = getIntent().getStringExtra("category");
@@ -56,7 +60,7 @@ public class ProductListActivity extends AppCompatActivity {
             productListAdapter = new ProductListAdapter(products.getMakeupList(), ProductListActivity.this);
 
         } else if (category.equals("Hair")) {
-            productListAdapter = new ProductListAdapter(products.getMakeupList(), ProductListActivity.this);
+            productListAdapter = new ProductListAdapter(products.getHairList(), ProductListActivity.this);
 
         }
         rcyProducts.setAdapter(productListAdapter);

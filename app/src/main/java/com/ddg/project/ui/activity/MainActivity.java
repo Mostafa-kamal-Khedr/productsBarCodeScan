@@ -288,6 +288,8 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
         tv_dialog_successDetails.setText("This product is a non-genuine and unlicensed product from the manufacturer, contributed to the disposal of Fake products by pressing Report product");
 
 
+        TextView tv_dialog_productName = dialog2.findViewById(R.id.tv_dialog_productName);
+        tv_dialog_productName.setVisibility(View.GONE);
         TextView tv_dialog_original = dialog2.findViewById(R.id.tv_dialog_original);
         tv_dialog_original.setText("Fake Product");
 

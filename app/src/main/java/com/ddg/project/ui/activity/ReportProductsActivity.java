@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.ddg.project.R;
+import com.ddg.project.helper.ImageDialog;
 import com.ddg.project.helper.SharedPreferenceManager;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
@@ -94,7 +95,9 @@ public class ReportProductsActivity extends AppCompatActivity {
         setSupportActionBar(customToolbar);
         TextView aboutUserAppBarTitle = findViewById(R.id.appbar_title);
         aboutUserAppBarTitle.setText(R.string.reportProducts);
-
+        ImageView back = findViewById(R.id.iv_back);
+        Glide.with(ReportProductsActivity.this).load(ImageDialog.getImage("ic_arrow_back",ReportProductsActivity.this)).apply(ImageDialog.getRewuestOption())
+                .into(back);
         ivReportImageOfProduct = findViewById(R.id.iv_report);
     }
 
@@ -229,5 +232,9 @@ public class ReportProductsActivity extends AppCompatActivity {
                 Toast.makeText(this, "Error in upload Image", Toast.LENGTH_SHORT).show();
             }
         }
+    }
+
+    public void onBackPress(View view) {
+        super.onBackPressed();
     }
 }

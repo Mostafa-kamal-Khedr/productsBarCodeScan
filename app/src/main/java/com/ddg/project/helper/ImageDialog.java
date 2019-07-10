@@ -35,6 +35,11 @@ public class ImageDialog {
                 .skipMemoryCache(true);
         return options;
     }
+    public static int getImage(String imageName,Context  context) {
 
+        int drawableResourceId = context.getResources().getIdentifier(imageName, "drawable", context.getPackageName());
+
+        return drawableResourceId;
+    }
 
 }

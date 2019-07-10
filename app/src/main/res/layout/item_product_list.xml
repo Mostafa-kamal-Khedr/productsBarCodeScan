@@ -3,7 +3,6 @@
     android:layout_width="200dp"
     android:id="@+id/rl_recyclerContainer"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
     android:background="@drawable/white_border">
 
     <ImageView
