@@ -57,7 +57,7 @@ public class ProductListActivity extends AppCompatActivity {
             productListAdapter = new ProductListAdapter(products.getPerfumeList(), ProductListActivity.this);
 
         } else if (category.equals("Skin Care")) {
-            productListAdapter = new ProductListAdapter(products.getMakeupList(), ProductListActivity.this);
+            productListAdapter = new ProductListAdapter(products.getSkinCareList(), ProductListActivity.this);
 
         } else if (category.equals("Hair")) {
             productListAdapter = new ProductListAdapter(products.getHairList(), ProductListActivity.this);

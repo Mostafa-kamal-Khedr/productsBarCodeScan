@@ -96,7 +96,7 @@ public class ReportProductsActivity extends AppCompatActivity {
         TextView aboutUserAppBarTitle = findViewById(R.id.appbar_title);
         aboutUserAppBarTitle.setText(R.string.reportProducts);
         ImageView back = findViewById(R.id.iv_back);
-        Glide.with(ReportProductsActivity.this).load(ImageDialog.getImage("ic_arrow_back",ReportProductsActivity.this)).apply(ImageDialog.getRewuestOption())
+        Glide.with(ReportProductsActivity.this).load(ImageDialog.getImage("ic_close",ReportProductsActivity.this)).apply(ImageDialog.getRewuestOption())
                 .into(back);
         ivReportImageOfProduct = findViewById(R.id.iv_report);
     }

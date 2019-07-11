@@ -103,23 +103,59 @@ public class Products {
         return makeUpList;
     }
 
+    public List<ProductsModel> getSkinCareList() {
+
+
+        List<ProductsModel> skinCareList = new ArrayList<>();
+        skinCareList.add(new ProductsModel("Body Scrub Hempz", "skin1", " https://www.hempz.com/triple-moisture-body-scrub/nl/en/fragrances/212-fragrance/212-carolina-herrera-nyc/212-nyc/"));
+
+
+        skinCareList.add(new ProductsModel("Clean and clear", "skin2", "https://www.cleanandcleararabia.com/products/blackhead-clearing/blackhead-clearing-cleanser"));
+
+
+        skinCareList.add(new ProductsModel("Hemp hard working foot protector", "skin3", "https://www.thebodyshop.com/en-gb/body/foot-care/hemp-hard-working-foot-protector/p/p000787"));
+
+
+        skinCareList.add(new ProductsModel("Hempz pomegranate body wash", "skin4", "https://www.hempz.com/pomegranate-body-wash"));
+        skinCareList.add(new ProductsModel("Himalaya Herbals Purifying Neem Face Wash", "skin5", " http://www.himalayaherbals.com/products/skincare/Purifying-Neem-Face-Wash.htm/"));
+
+
+        skinCareList.add(new ProductsModel("JOHNSON’S Baby Oil", "skin6", " https://www.johnsonsbabyarabia.com/en/johnsons-baby-oil/212-nyc/"));
+
+
+        skinCareList.add(new ProductsModel("JOHNSON’S Shampoo", "skin7", "https://www.johnsonsbabyarabia.com/en/johnsons-baby-shampoo"));
+
+
+        skinCareList.add(new ProductsModel("Nature Republic NEW Soothing& Moisture ALOE VERA", "skin8", "\n" +
+                "https://www.naturerepublicusa.com/products/soothing-and-moisture-aloe-vera-92-soothing-gel"));
+
+
+        skinCareList.add(new ProductsModel("Nivea Cream", "skin9", "https://www.nivea-me.com/en-me/products/nivea-creme-421641040214.html/"));
+
+
+        skinCareList.add(new ProductsModel("The Body Shop Mini Papaya Body Butter", "skin10", "https://thebodyshop.com.ph/body/bath-body/body-butters-creams/papaya-body-butter/"));
+
+
+        return skinCareList;
+    }
+
 
     public List<ProductsModel> getHairList() {
 
 
         List<ProductsModel> hairList = new ArrayList<>();
 
-        hairList.add(new ProductsModel("Bioluxe Styling Gel", "hair1","https://www.amazon.com/BioLuxe-Sculpting-Styling-Gel-Fl/dp/B0083A897K" ));
-        hairList.add(new ProductsModel("Clear Scalp & Hair Therapy Nourishing Anti-dandruff Shampoo", "hair2","https://www.amazon.in/Therapy-Nourishing-Anti-Dandruff-Shampoo-Complete/dp/B01NCBN9WY" ));
-        hairList.add(new ProductsModel("Dove hair therapy oil replacement", "hair3","https://www.dove.com/sa/en/hair-care/hair-oil/hair-fall-rescue-oil-replacement.html" ));
-        
+        hairList.add(new ProductsModel("Bioluxe Styling Gel", "hair1", "https://www.amazon.com/BioLuxe-Sculpting-Styling-Gel-Fl/dp/B0083A897K"));
+        hairList.add(new ProductsModel("Clear Scalp & Hair Therapy Nourishing Anti-dandruff Shampoo", "hair2", "https://www.amazon.in/Therapy-Nourishing-Anti-Dandruff-Shampoo-Complete/dp/B01NCBN9WY"));
+        hairList.add(new ProductsModel("Dove hair therapy oil replacement", "hair3", "https://www.dove.com/sa/en/hair-care/hair-oil/hair-fall-rescue-oil-replacement.html"));
+
         hairList.add(new ProductsModel("Elvive extraordinary oil", "hair4", "https://ounousareviews.com/product/hair/loreal-paris-elvive-extraordinary-oil-replacement/"));
-        hairList.add(new ProductsModel("Garnier Fructis Style Curl Scrunch Gel","hair5" ,"https://www.garnierusa.com/about-our-brands/fructis-style/curls/curl-scrunch-controlling-gel" ));
-        hairList.add(new ProductsModel("Garnier Nutrisse Nourishing Color Creme", "hair6","https://www.garnierusa.com/about-our-brands/hair-color/nutrisse-color-creme/nourishing-color-creme-92-light-buttery-blonde" ));
-        hairList.add(new ProductsModel("Garnier Nutrisse Ultra Color","hair7" ,"https://www.garnierusa.com/about-our-brands/hair-color/nutrisse-ultra-color/ultra-color-br1-deepest-intense-burgundy" ));
-        hairList.add(new ProductsModel("Orofluido Mask (250ml)","hair8" ,"https://www.amazon.com/Orofluido-Beauty-Mask-8-45-250/dp/B004QBRX5Y?th=1" ));
-        hairList.add(new ProductsModel("Orofluido-Beauty-Elixir-Your-Hair","hair9" ,"https://www.amazon.com/Orofluido-Beauty-Elixir-Your-Hair/dp/B00CVT6ZU2" ));
-        hairList.add(new ProductsModel("Pantene Damage Detox Conditioner","hair10" , "https://www.amazon.com/Pantene-Damage-Revitalizing-Shampoo-12-600-Fluid/dp/B00FKSWNRK"));
+        hairList.add(new ProductsModel("Garnier Fructis Style Curl Scrunch Gel", "hair5", "https://www.garnierusa.com/about-our-brands/fructis-style/curls/curl-scrunch-controlling-gel"));
+        hairList.add(new ProductsModel("Garnier Nutrisse Nourishing Color Creme", "hair6", "https://www.garnierusa.com/about-our-brands/hair-color/nutrisse-color-creme/nourishing-color-creme-92-light-buttery-blonde"));
+        hairList.add(new ProductsModel("Garnier Nutrisse Ultra Color", "hair7", "https://www.garnierusa.com/about-our-brands/hair-color/nutrisse-ultra-color/ultra-color-br1-deepest-intense-burgundy"));
+        hairList.add(new ProductsModel("Orofluido Mask (250ml)", "hair8", "https://www.amazon.com/Orofluido-Beauty-Mask-8-45-250/dp/B004QBRX5Y?th=1"));
+        hairList.add(new ProductsModel("Orofluido-Beauty-Elixir-Your-Hair", "hair9", "https://www.amazon.com/Orofluido-Beauty-Elixir-Your-Hair/dp/B00CVT6ZU2"));
+        hairList.add(new ProductsModel("Pantene Damage Detox Conditioner", "hair10", "https://www.amazon.com/Pantene-Damage-Revitalizing-Shampoo-12-600-Fluid/dp/B00FKSWNRK"));
 
         return hairList;
     }
