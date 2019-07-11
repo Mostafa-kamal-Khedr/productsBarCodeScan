@@ -32,6 +32,7 @@ import com.ddg.project.helper.BottomNavigationViewHelper;
 import com.ddg.project.helper.SharedPreferenceManager;
 import com.ddg.project.ui.fragment.HomeFragment;
 import com.ddg.project.ui.fragment.MoreFragment;
+import com.ddg.project.ui.fragment.ScanFragment;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.jaeger.library.StatusBarUtil;
 
@@ -185,7 +186,7 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
                         homeFlActivityFrameContainer.setVisibility(View.GONE);
                         scanContainer.setVisibility(View.VISIBLE);
 
-//                        loadFragment(new ScanFragment(MainActivity.this));
+                        loadFragment(new ScanFragment(MainActivity.this));
 
                     }
 

@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -96,8 +97,8 @@ public class ReportProductsActivity extends AppCompatActivity {
         TextView aboutUserAppBarTitle = findViewById(R.id.appbar_title);
         aboutUserAppBarTitle.setText(R.string.reportProducts);
         ImageView back = findViewById(R.id.iv_back);
-        Glide.with(ReportProductsActivity.this).load(ImageDialog.getImage("ic_close",ReportProductsActivity.this)).apply(ImageDialog.getRewuestOption())
-                .into(back);
+
+        back.setImageDrawable(ContextCompat.getDrawable(ReportProductsActivity.this, R.drawable.ic_close));
         ivReportImageOfProduct = findViewById(R.id.iv_report);
     }
 
