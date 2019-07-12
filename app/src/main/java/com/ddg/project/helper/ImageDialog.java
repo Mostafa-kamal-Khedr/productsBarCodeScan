@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -25,21 +26,21 @@ public class ImageDialog {
 
 
 
-    public static RequestOptions getRewuestOption() {
+    public static RequestOptions getRequestOption() {
+
         RequestOptions options = new RequestOptions()
                 .centerCrop()
-                .placeholder(R.drawable.progress_animation)
                 .diskCacheStrategy(DiskCacheStrategy.NONE)
                 .priority(Priority.HIGH)
 
                 .skipMemoryCache(true);
         return options;
     }
-    public static int getImage(String imageName,Context  context) {
-
+/*    public static int getImage(int imageName,Context  context) {
+                                               .getResources().getDrawable
         int drawableResourceId = context.getResources().getIdentifier(imageName, "drawable", context.getPackageName());
-
+        Drawable drawable = context.getResources().getDrawable(imageName);
         return drawableResourceId;
-    }
+    }*/
 
 }

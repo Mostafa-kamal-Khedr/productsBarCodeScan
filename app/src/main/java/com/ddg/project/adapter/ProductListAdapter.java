@@ -47,11 +47,11 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
-        String productImage = productsModelList.get(position).getProductImage();
+        int productImage = productsModelList.get(position).getProductImage();
         final String productLink = productsModelList.get(position).getProductLink();
         String productName = productsModelList.get(position).getProductName();
 
-        Glide.with(context).load(ImageDialog.getImage(productImage,context)).apply(ImageDialog.getRewuestOption())
+        Glide.with(context).load(productImage).apply(ImageDialog.getRequestOption())
                 .into(viewHolder.ivProductList);
         viewHolder.tvProductList.setText(productName);
 

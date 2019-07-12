@@ -1,5 +1,6 @@
 package com.ddg.project.db;
 
+import com.ddg.project.R;
 import com.ddg.project.model.ProductsModel;
 
 import java.util.ArrayList;
@@ -70,16 +71,16 @@ public class Products {
     public List<ProductsModel> getMakeupList() {
 
         List<ProductsModel> makeUpList = new ArrayList<>();
-        makeUpList.add(new ProductsModel("OFRA Blissful Highlighter", "makeup1", "https://www.ofracosmetics.com/products/blissful-highlighter"));
-        makeUpList.add(new ProductsModel("OFRA Cosmetics Ofra X Manny MUA Lip Set", "makeup2", "https://www.ofracosmetics.com/products/long-lasting-liquid-lip-set-ofraxmannymua"));
-        makeUpList.add(new ProductsModel("OFRA Eyeshadow Peach", "makeup3", "https://www.ofracosmetics.com/products/blush-godet-pan-refill-peach?variant=41883718534"));
-        makeUpList.add(new ProductsModel("OFRA Lipliner Mauve", "makeup4", "https://www.ofracosmetics.com/products/lipliner-mauve"));
-        makeUpList.add(new ProductsModel("OFRA Lipstick 101", "makeup5", "https://www.ofracosmetics.com/products/lipstick-101"));
-        makeUpList.add(new ProductsModel("the Balm Mary-Lou Manizer Luminizer", "makeup6", "https://thebalm.com/products/man-681619700583"));
-        makeUpList.add(new ProductsModel("theBalm getönte Tagescreme Balm Shelter Tinted Moisturizer,Medium", "makeup7", "https://thebalm.com/products/balm-shelter-tinted-moisturizer"));
-        makeUpList.add(new ProductsModel("theBalm Manizer Kit", "makeup8", "https://thebalm.com/products/the-manizer-sisters"));
-        makeUpList.add(new ProductsModel("theBalm Meet Matte Hughes- Sincere", "makeup9", "https://thebalm.com/products/meet-matte-hughes"));
-        makeUpList.add(new ProductsModel("theBalm ShadowBlush, DownBoy", "makeup10", "https://thebalm.com/products/do-681619700514"));
+        makeUpList.add(new ProductsModel("OFRA Blissful Highlighter", R.drawable.makeup1, "https://www.ofracosmetics.com/products/blissful-highlighter"));
+        makeUpList.add(new ProductsModel("OFRA Cosmetics Ofra X Manny MUA Lip Set", R.drawable.makeup2, "https://www.ofracosmetics.com/products/long-lasting-liquid-lip-set-ofraxmannymua"));
+        makeUpList.add(new ProductsModel("OFRA Eyeshadow Peach", R.drawable.makeup3, "https://www.ofracosmetics.com/products/blush-godet-pan-refill-peach?variant=41883718534"));
+        makeUpList.add(new ProductsModel("OFRA Lipliner Mauve", R.drawable.makeup4, "https://www.ofracosmetics.com/products/lipliner-mauve"));
+        makeUpList.add(new ProductsModel("OFRA Lipstick 101", R.drawable.makeup5, "https://www.ofracosmetics.com/products/lipstick-101"));
+        makeUpList.add(new ProductsModel("the Balm Mary-Lou Manizer Luminizer", R.drawable.makeup6, "https://thebalm.com/products/man-681619700583"));
+        makeUpList.add(new ProductsModel("theBalm getönte Tagescreme Balm Shelter Tinted Moisturizer,Medium", R.drawable.makeup7, "https://thebalm.com/products/balm-shelter-tinted-moisturizer"));
+        makeUpList.add(new ProductsModel("theBalm Manizer Kit", R.drawable.makeup8, "https://thebalm.com/products/the-manizer-sisters"));
+        makeUpList.add(new ProductsModel("theBalm Meet Matte Hughes- Sincere", R.drawable.makeup9, "https://thebalm.com/products/meet-matte-hughes"));
+        makeUpList.add(new ProductsModel("theBalm ShadowBlush, DownBoy", R.drawable.makeup10, "https://thebalm.com/products/do-681619700514"));
 
 
         return makeUpList;
@@ -88,16 +89,16 @@ public class Products {
     public List<ProductsModel> getPerfumeList() {
 
         List<ProductsModel> makeUpList = new ArrayList<>();
-        makeUpList.add(new ProductsModel("212 Carolina Herrera For Women Personal Fragrances", "perfume1", " https://www.carolinaherrera.com/nl/en/fragrances/212-fragrance/212-carolina-herrera-nyc/212-nyc/"));
-        makeUpList.add(new ProductsModel("Calvin Klien Eternity Air For Women", "perfume2", "https://www.calvinklein.co.uk/eternity-air-for-women-50-ml-eau-de-parfum-6522903200blu"));
-        makeUpList.add(new ProductsModel("Carolina Herrera - 'Good Girl' Eau De Parfum", "perfume3", "https://www.fruugo.ie/good-girl-perfume-by-carolina-herrera-30ml-edp/p-31282527-64947129"));
-        makeUpList.add(new ProductsModel("Hugo Boss Hugo Woman EdP", "perfume4", "https://www.fragrantica.com/perfume/Hugo-Boss/Hugo-Woman-Eau-de-Parfum-29314.html"));
-        makeUpList.add(new ProductsModel("Ivoire Balmain", "perfume5", "https://www.fragrantica.com/perfume/Pierre-Balmain/Ivoire-15557.html"));
-        makeUpList.add(new ProductsModel("JADORE by Christian Dior Eau De Parfum Spray 1.7 oz", "perfume6", "https://www.dior.com/en_us/products/beauty-Y0715201-jadore-eau-de-parfum"));
-        makeUpList.add(new ProductsModel("Mancera Roses Greedy", "perfume7", "https://www.fragrantica.com/perfume/Mancera/Roses-Greedy-18042.html"));
-        makeUpList.add(new ProductsModel("Roses De Chloe", "perfume8", "https://www.chloe.com/ca/fragrance_cod46467853gk.html"));
-        makeUpList.add(new ProductsModel("Tom Ford Black Orchid Eau de Parfum 100ml", "perfume9", "https://www.fragrantica.com/perfume/Tom-Ford/Black-Orchid-1018.html"));
-        makeUpList.add(new ProductsModel("Van-Cleef-Arpels", "perfume10", "https://www.fragrantica.com/perfume/Van-Cleef-Arpels/Van-Cleef-1102.html"));
+        makeUpList.add(new ProductsModel("212 Carolina Herrera For Women Personal Fragrances", R.drawable.perfume1, " https://www.carolinaherrera.com/nl/en/fragrances/212-fragrance/212-carolina-herrera-nyc/212-nyc/"));
+        makeUpList.add(new ProductsModel("Calvin Klien Eternity Air For Women", R.drawable.perfume2, "https://www.calvinklein.co.uk/eternity-air-for-women-50-ml-eau-de-parfum-6522903200blu"));
+        makeUpList.add(new ProductsModel("Carolina Herrera - 'Good Girl' Eau De Parfum", R.drawable.perfume3, "https://www.fruugo.ie/good-girl-perfume-by-carolina-herrera-30ml-edp/p-31282527-64947129"));
+        makeUpList.add(new ProductsModel("Hugo Boss Hugo Woman EdP", R.drawable.perfume4, "https://www.fragrantica.com/perfume/Hugo-Boss/Hugo-Woman-Eau-de-Parfum-29314.html"));
+        makeUpList.add(new ProductsModel("Ivoire Balmain", R.drawable.perfume5, "https://www.fragrantica.com/perfume/Pierre-Balmain/Ivoire-15557.html"));
+        makeUpList.add(new ProductsModel("JADORE by Christian Dior Eau De Parfum Spray 1.7 oz", R.drawable.perfume6, "https://www.dior.com/en_us/products/beauty-Y0715201-jadore-eau-de-parfum"));
+        makeUpList.add(new ProductsModel("Mancera Roses Greedy", R.drawable.perfume7, "https://www.fragrantica.com/perfume/Mancera/Roses-Greedy-18042.html"));
+        makeUpList.add(new ProductsModel("Roses De Chloe", R.drawable.perfume8, "https://www.chloe.com/ca/fragrance_cod46467853gk.html"));
+        makeUpList.add(new ProductsModel("Tom Ford Black Orchid Eau de Parfum 100ml", R.drawable.perfume9, "https://www.fragrantica.com/perfume/Tom-Ford/Black-Orchid-1018.html"));
+        makeUpList.add(new ProductsModel("Van-Cleef-Arpels", R.drawable.perfume10, "https://www.fragrantica.com/perfume/Van-Cleef-Arpels/Van-Cleef-1102.html"));
 
 
         return makeUpList;
@@ -107,33 +108,33 @@ public class Products {
 
 
         List<ProductsModel> skinCareList = new ArrayList<>();
-        skinCareList.add(new ProductsModel("Body Scrub Hempz", "skin1", " https://www.hempz.com/triple-moisture-body-scrub/nl/en/fragrances/212-fragrance/212-carolina-herrera-nyc/212-nyc/"));
+        skinCareList.add(new ProductsModel("Body Scrub Hempz", R.drawable.skin1, " https://www.hempz.com/triple-moisture-body-scrub/nl/en/fragrances/212-fragrance/212-carolina-herrera-nyc/212-nyc/"));
 
 
-        skinCareList.add(new ProductsModel("Clean and clear", "skin2", "https://www.cleanandcleararabia.com/products/blackhead-clearing/blackhead-clearing-cleanser"));
+        skinCareList.add(new ProductsModel("Clean and clear", R.drawable.skin2, "https://www.cleanandcleararabia.com/products/blackhead-clearing/blackhead-clearing-cleanser"));
 
 
-        skinCareList.add(new ProductsModel("Hemp hard working foot protector", "skin3", "https://www.thebodyshop.com/en-gb/body/foot-care/hemp-hard-working-foot-protector/p/p000787"));
+        skinCareList.add(new ProductsModel("Hemp hard working foot protector", R.drawable.skin3, "https://www.thebodyshop.com/en-gb/body/foot-care/hemp-hard-working-foot-protector/p/p000787"));
 
 
-        skinCareList.add(new ProductsModel("Hempz pomegranate body wash", "skin4", "https://www.hempz.com/pomegranate-body-wash"));
-        skinCareList.add(new ProductsModel("Himalaya Herbals Purifying Neem Face Wash", "skin5", " http://www.himalayaherbals.com/products/skincare/Purifying-Neem-Face-Wash.htm/"));
+        skinCareList.add(new ProductsModel("Hempz pomegranate body wash", R.drawable.skin4, "https://www.hempz.com/pomegranate-body-wash"));
+        skinCareList.add(new ProductsModel("Himalaya Herbals Purifying Neem Face Wash", R.drawable.skin5, " http://www.himalayaherbals.com/products/skincare/Purifying-Neem-Face-Wash.htm/"));
 
 
-        skinCareList.add(new ProductsModel("JOHNSON’S Baby Oil", "skin6", " https://www.johnsonsbabyarabia.com/en/johnsons-baby-oil/212-nyc/"));
+        skinCareList.add(new ProductsModel("JOHNSON’S Baby Oil", R.drawable.skin6, " https://www.johnsonsbabyarabia.com/en/johnsons-baby-oil/212-nyc/"));
 
 
-        skinCareList.add(new ProductsModel("JOHNSON’S Shampoo", "skin7", "https://www.johnsonsbabyarabia.com/en/johnsons-baby-shampoo"));
+        skinCareList.add(new ProductsModel("JOHNSON’S Shampoo", R.drawable.skin7, "https://www.johnsonsbabyarabia.com/en/johnsons-baby-shampoo"));
 
 
-        skinCareList.add(new ProductsModel("Nature Republic NEW Soothing& Moisture ALOE VERA", "skin8", "\n" +
+        skinCareList.add(new ProductsModel("Nature Republic NEW Soothing& Moisture ALOE VERA", R.drawable.skin8,
                 "https://www.naturerepublicusa.com/products/soothing-and-moisture-aloe-vera-92-soothing-gel"));
 
 
-        skinCareList.add(new ProductsModel("Nivea Cream", "skin9", "https://www.nivea-me.com/en-me/products/nivea-creme-421641040214.html/"));
+        skinCareList.add(new ProductsModel("Nivea Cream", R.drawable.skin9, "https://www.nivea-me.com/en-me/products/nivea-creme-421641040214.html/"));
 
 
-        skinCareList.add(new ProductsModel("The Body Shop Mini Papaya Body Butter", "skin10", "https://thebodyshop.com.ph/body/bath-body/body-butters-creams/papaya-body-butter/"));
+        skinCareList.add(new ProductsModel("The Body Shop Mini Papaya Body Butter", R.drawable.skin10, "https://thebodyshop.com.ph/body/bath-body/body-butters-creams/papaya-body-butter/"));
 
 
         return skinCareList;
@@ -145,17 +146,17 @@ public class Products {
 
         List<ProductsModel> hairList = new ArrayList<>();
 
-        hairList.add(new ProductsModel("Bioluxe Styling Gel", "hair1", "https://www.amazon.com/BioLuxe-Sculpting-Styling-Gel-Fl/dp/B0083A897K"));
-        hairList.add(new ProductsModel("Clear Scalp & Hair Therapy Nourishing Anti-dandruff Shampoo", "hair2", "https://www.amazon.in/Therapy-Nourishing-Anti-Dandruff-Shampoo-Complete/dp/B01NCBN9WY"));
-        hairList.add(new ProductsModel("Dove hair therapy oil replacement", "hair3", "https://www.dove.com/sa/en/hair-care/hair-oil/hair-fall-rescue-oil-replacement.html"));
+        hairList.add(new ProductsModel("Bioluxe Styling Gel", R.drawable.hair1, "https://www.amazon.com/BioLuxe-Sculpting-Styling-Gel-Fl/dp/B0083A897K"));
+        hairList.add(new ProductsModel("Clear Scalp & Hair Therapy Nourishing Anti-dandruff Shampoo", R.drawable.hair2, "https://www.amazon.in/Therapy-Nourishing-Anti-Dandruff-Shampoo-Complete/dp/B01NCBN9WY"));
+        hairList.add(new ProductsModel("Dove hair therapy oil replacement", R.drawable.hair3, "https://www.dove.com/sa/en/hair-care/hair-oil/hair-fall-rescue-oil-replacement.html"));
 
-        hairList.add(new ProductsModel("Elvive extraordinary oil", "hair4", "https://ounousareviews.com/product/hair/loreal-paris-elvive-extraordinary-oil-replacement/"));
-        hairList.add(new ProductsModel("Garnier Fructis Style Curl Scrunch Gel", "hair5", "https://www.garnierusa.com/about-our-brands/fructis-style/curls/curl-scrunch-controlling-gel"));
-        hairList.add(new ProductsModel("Garnier Nutrisse Nourishing Color Creme", "hair6", "https://www.garnierusa.com/about-our-brands/hair-color/nutrisse-color-creme/nourishing-color-creme-92-light-buttery-blonde"));
-        hairList.add(new ProductsModel("Garnier Nutrisse Ultra Color", "hair7", "https://www.garnierusa.com/about-our-brands/hair-color/nutrisse-ultra-color/ultra-color-br1-deepest-intense-burgundy"));
-        hairList.add(new ProductsModel("Orofluido Mask (250ml)", "hair8", "https://www.amazon.com/Orofluido-Beauty-Mask-8-45-250/dp/B004QBRX5Y?th=1"));
-        hairList.add(new ProductsModel("Orofluido-Beauty-Elixir-Your-Hair", "hair9", "https://www.amazon.com/Orofluido-Beauty-Elixir-Your-Hair/dp/B00CVT6ZU2"));
-        hairList.add(new ProductsModel("Pantene Damage Detox Conditioner", "hair10", "https://www.amazon.com/Pantene-Damage-Revitalizing-Shampoo-12-600-Fluid/dp/B00FKSWNRK"));
+        hairList.add(new ProductsModel("Elvive extraordinary oil", R.drawable.hair4, "https://ounousareviews.com/product/hair/loreal-paris-elvive-extraordinary-oil-replacement/"));
+        hairList.add(new ProductsModel("Garnier Fructis Style Curl Scrunch Gel", R.drawable.hair5, "https://www.garnierusa.com/about-our-brands/fructis-style/curls/curl-scrunch-controlling-gel"));
+        hairList.add(new ProductsModel("Garnier Nutrisse Nourishing Color Creme", R.drawable.hair6, "https://www.garnierusa.com/about-our-brands/hair-color/nutrisse-color-creme/nourishing-color-creme-92-light-buttery-blonde"));
+        hairList.add(new ProductsModel("Garnier Nutrisse Ultra Color", R.drawable.hair7, "https://www.garnierusa.com/about-our-brands/hair-color/nutrisse-ultra-color/ultra-color-br1-deepest-intense-burgundy"));
+        hairList.add(new ProductsModel("Orofluido Mask (250ml)", R.drawable.hair8, "https://www.amazon.com/Orofluido-Beauty-Mask-8-45-250/dp/B004QBRX5Y?th=1"));
+        hairList.add(new ProductsModel("Orofluido-Beauty-Elixir-Your-Hair", R.drawable.hair9, "https://www.amazon.com/Orofluido-Beauty-Elixir-Your-Hair/dp/B00CVT6ZU2"));
+        hairList.add(new ProductsModel("Pantene Damage Detox Conditioner", R.drawable.hair10, "https://www.amazon.com/Pantene-Damage-Revitalizing-Shampoo-12-600-Fluid/dp/B00FKSWNRK"));
 
         return hairList;
     }

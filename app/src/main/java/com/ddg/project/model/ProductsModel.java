@@ -7,22 +7,22 @@ import java.io.Serializable;
  */
 public class ProductsModel implements Serializable {
 
-    private String productImage;
+    private int productImage;
     private String productName;
     private String productLink;
 
-    public ProductsModel(String productName, String productImage, String productLink) {
+    public ProductsModel(String productName, int productImage, String productLink) {
         this.productImage = productImage;
         this.productName = productName;
         this.productLink = productLink;
     }
 
 
-    public String getProductImage() {
+    public int getProductImage() {
         return productImage;
     }
 
-    public void setProductImage(String productImage) {
+    public void setProductImage(int productImage) {
         this.productImage = productImage;
     }
 
